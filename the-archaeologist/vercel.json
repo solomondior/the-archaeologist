@@ -1,0 +1,6 @@
+{
+  "crons": [
+    { "path": "/api/cron/dig",      "schedule": "0 12 * * *"       },
+    { "path": "/api/cron/fragment", "schedule": "0 0,6,12,18 * * *" }
+  ]
+}
