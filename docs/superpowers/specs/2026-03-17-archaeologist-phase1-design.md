@@ -73,6 +73,7 @@ CandidateScorer          FragmentGenerator         /fragments
 
 ```
 Cron fires
+  → CandidateScorer.scoreAll()              ← re-scores all 'candidate' rows in dig_candidates
   → fetch top-scored candidate from dig_candidates
   → DataProvider.getToken*(address)         ← all data fetch here
   → ContextBuilder.build(tokenData, memory) ← assembles Claude prompt
@@ -80,7 +81,9 @@ Cron fires
   → ValidationLayer.verify(dig)             ← checks all cited hashes
   → if passed:  INSERT dig (published=true, validation_status='passed')
   → if flagged: INSERT dig (published=false, validation_status='flagged')
+  → UPDATE dig_candidates SET status='completed' WHERE id=candidate.id
   → MemoryManager.compress(cycle)           ← stores summary for next cycle
+  → on any error: INSERT agent_memory (status='failed', error_message=...)
 ```
 
 ### Data Flow — Fragment Cycle
@@ -135,6 +138,8 @@ the-archaeologist/
 │       └── 002_rls_policies.sql
 ├── fixtures/
 │   └── tokens/                         # 10 mock dead token JSON files
+├── scripts/
+│   └── seed-candidates.ts              # seeds fixtures into dig_candidates; run once via `npm run seed`
 ├── components/
 │   ├── dig-card.tsx
 │   ├── fragment-item.tsx
@@ -178,6 +183,8 @@ interface DataProvider {
 
 The mock validator returns `true` for any hash that appears in the fixture data for the current token, `false` otherwise — simulating real validation behaviour without hitting Solscan.
 
+In mock mode, `solscan_url` in `on_chain_evidence` is set to `null`. The evidence panel renders hash references as non-clickable text when `solscan_url` is null, rather than dead links.
+
 ---
 
 ## Agent Cycle Detail
@@ -212,10 +219,10 @@ interface GeneratedDig {
   }
   on_chain_evidence: Array<{
     type: string
-    hash: string
-    address: string
+    hash?: string       // optional — not all evidence items have a tx hash
+    address?: string    // optional — not all evidence items have a wallet address
     description: string
-    solscan_url: string
+    solscan_url?: string // omitted or null in mock mode (hash is not real)
   }>
 }
 ```
@@ -223,11 +230,14 @@ interface GeneratedDig {
 ### Validation Layer
 
 Before any dig is marked `published=true`:
-- Every `hash` in `on_chain_evidence` is passed to `DataProvider.verifyTransactionHash()`
-- Every `address` is passed to `DataProvider.verifyWalletAddress()`
-- If all pass: `validation_status = 'passed'`, `published = true`
+- Every non-null `hash` in `on_chain_evidence` is passed to `DataProvider.verifyTransactionHash()`
+- Every non-null `address` is passed to `DataProvider.verifyWalletAddress()`
+- Null/empty fields are skipped — not treated as failures
+- If all present values pass: `validation_status = 'passed'`, `published = true`
 - If any fail: `validation_status = 'flagged'`, `published = false`
 - Flagged digs are stored for manual review (Phase 4 admin panel)
+
+Fragments bypass validation by design — they are observational signals and never cite specific transaction hashes. If that changes in a future phase, a validation step can be added to the fragment cycle.
 
 ### Candidate Scoring Formula
 
@@ -264,7 +274,7 @@ death_date timestamptz,
 peak_market_cap numeric,
 peak_holder_count integer,
 cause_of_death text,           -- 'rug' | 'abandonment' | 'whale_exit' | 'natural_decay' | 'unknown'
-content text not null,
+content jsonb not null,        -- {what_it_was, what_happened, what_remains, archaeologist_thinks}
 on_chain_evidence jsonb,       -- array of {type, hash, address, description, solscan_url}
 raw_context jsonb,             -- full context payload sent to Claude (debug + replay)
 validation_status text default 'pending',  -- 'pending' | 'passed' | 'flagged'
@@ -352,6 +362,8 @@ cycle_number integer not null,
 cycle_type text not null,      -- 'dig' | 'fragment'
 tokens_covered text[],
 memory_summary text,
+status text default 'completed', -- 'completed' | 'failed' | 'flagged'
+error_message text,            -- populated when status = 'failed'
 created_at timestamptz default now()
 ```
 
@@ -412,7 +424,7 @@ Single column. Chronological list of fragments. Each fragment: timestamp, conten
 {
   "crons": [
     { "path": "/api/cron/dig",      "schedule": "0 12 * * *"  },
-    { "path": "/api/cron/fragment", "schedule": "0 6,12,18,0 * * *" }
+    { "path": "/api/cron/fragment", "schedule": "0 0,6,12,18 * * *" }
   ]
 }
 ```
@@ -484,6 +496,6 @@ Each fixture covers a different cause of death and story pattern:
 - [ ] Validation layer correctly flags a dig when a hash is not in fixture data
 - [ ] Homepage renders latest dig + fragments sidebar
 - [ ] Archive renders all digs, filters and sort work correctly
-- [ ] Individual dig page renders content + evidence panel with Solscan links
+- [ ] Individual dig page renders content + evidence panel with Solscan links (non-clickable in mock mode; linked in live mode)
 - [ ] Supabase migrations apply cleanly to a fresh project
 - [ ] All 10 fixture tokens scored and seeded into `dig_candidates` on first run
