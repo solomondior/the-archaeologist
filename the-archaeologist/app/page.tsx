@@ -1,65 +1,91 @@
-import Image from "next/image";
+import { createServerClient } from '@/lib/supabase/server'
+import { DigCard } from '@/components/dig-card'
+import { FragmentItem } from '@/components/fragment-item'
+import { StatsBar } from '@/components/stats-bar'
+import type { DigRow, FragmentRow } from '@/lib/supabase/types'
 
-export default function Home() {
+export const dynamic = 'force-dynamic'
+
+async function getData() {
+  const supabase = createServerClient()
+
+  const [{ data: latestDig }, { data: recentFragments }, { count: digCount }, { count: fossilCount }] =
+    await Promise.all([
+      supabase
+        .from('digs')
+        .select('*')
+        .eq('published', true)
+        .order('dig_number', { ascending: false })
+        .limit(1)
+        .single(),
+      supabase
+        .from('fragments')
+        .select('*')
+        .eq('published', true)
+        .order('generated_at', { ascending: false })
+        .limit(6),
+      supabase.from('digs').select('*', { count: 'exact', head: true }).eq('published', true),
+      supabase.from('fossils').select('*', { count: 'exact', head: true }),
+    ])
+
+  const lastDigHours = latestDig
+    ? Math.floor((Date.now() - new Date((latestDig as DigRow).generated_at).getTime()) / 3_600_000)
+    : null
+
+  return {
+    latestDig: latestDig as DigRow | null,
+    recentFragments: (recentFragments ?? []) as FragmentRow[],
+    tokensExamined: digCount ?? 0,
+    fossilsFound: fossilCount ?? 0,
+    lastDigHoursAgo: lastDigHours,
+  }
+}
+
+export default async function HomePage() {
+  const { latestDig, recentFragments, tokensExamined, fossilsFound, lastDigHoursAgo } = await getData()
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <header className="mb-12">
+        <h1 className="text-sm tracking-[0.3em] text-[#d97706] mb-2">THE ARCHAEOLOGIST</h1>
+        <p className="text-xs text-[#888]">digging through solana&apos;s memecoin graveyard.</p>
+      </header>
+
+      <div className="grid grid-cols-[1fr_280px] gap-12">
+        <div>
+          {latestDig ? (
+            <DigCard dig={latestDig} showLink />
+          ) : (
+            <div className="border-t border-[#1a1a1a] pt-4">
+              <p className="text-xs text-[#444]">
+                No digs published yet. Run the dig cron to generate the first one.
+              </p>
+            </div>
+          )}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+
+        <aside className="space-y-8">
+          <StatsBar
+            tokensExamined={tokensExamined}
+            fossilsFound={fossilsFound}
+            totalBurned={0}
+            lastDigHoursAgo={lastDigHoursAgo}
+          />
+
+          <div>
+            <div className="text-[10px] text-[#888] tracking-widest mb-4">RECENT FRAGMENTS</div>
+            {recentFragments.length === 0 ? (
+              <p className="text-xs text-[#444]">No fragments yet.</p>
+            ) : (
+              recentFragments.map((f) => <FragmentItem key={f.id} fragment={f} />)
+            )}
+          </div>
+
+          <div className="border-t border-[#1a1a1a] pt-6">
+            <p className="text-[10px] text-[#444] italic">every token has a last transaction.</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+  )
 }
