@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "address": "SolGhostMintAddr555555555555555555555555555555",
+    "name": "SOLGHOST",
+    "symbol": "SPKT",
+    "decimals": 6,
+    "launch_date": "2024-01-15T08:00:00Z",
+    "creator_wallet": "SolGhostDevWallet5555555555555555555555555555",
+    "current_supply": 750000000
+  },
+  "candidate_data": {
+    "address": "SolGhostMintAddr555555555555555555555555555555",
+    "name": "SOLGHOST",
+    "name_raw": "SOLGHOST",
+    "peak_market_cap": 180000,
+    "peak_holder_count": 450,
+    "current_holder_count": 88,
+    "last_transaction_date": "2024-09-22T14:00:00Z",
+    "days_since_last_tx": 176,
+    "rug_confirmed": false,
+    "unusual_patterns": false,
+    "cause_of_death": "natural_decay"
+  },
+  "holder_history": [
+    { "date": "2024-01-15T08:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-02-01T00:00:00Z", "holder_count": 320, "top_holders": [
+      { "wallet": "SolGhostWhale111111111111111111111111111111111", "balance": 30000000, "percentage": 4.0 }
+    ]},
+    { "date": "2024-03-15T00:00:00Z", "holder_count": 450, "top_holders": [
+      { "wallet": "SolGhostWhale111111111111111111111111111111111", "balance": 30000000, "percentage": 4.0 }
+    ]},
+    { "date": "2024-06-01T00:00:00Z", "holder_count": 280, "top_holders": [] },
+    { "date": "2024-09-22T00:00:00Z", "holder_count": 88, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-01-15T08:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 200, "market_cap": 750 },
+    { "timestamp": "2024-03-01T00:00:00Z", "open": 0.00022, "high": 0.00024, "low": 0.00019, "close": 0.00024, "volume": 38000, "market_cap": 180000 },
+    { "timestamp": "2024-05-01T00:00:00Z", "open": 0.000060, "high": 0.000065, "low": 0.000055, "close": 0.000058, "volume": 5500, "market_cap": 43500 },
+    { "timestamp": "2024-07-01T00:00:00Z", "open": 0.000018, "high": 0.00002, "low": 0.000015, "close": 0.000016, "volume": 900, "market_cap": 12000 },
+    { "timestamp": "2024-09-22T14:00:00Z", "open": 0.000004, "high": 0.000004, "low": 0.000003, "close": 0.000003, "volume": 30, "market_cap": 2250 }
+  ],
+  "transactions": [
+    {
+      "hash": "SolGhostMintTxaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 270000000,
+      "timestamp": "2024-01-15T08:00:00Z",
+      "type": "mint",
+      "from_wallet": "SolGhostDevWallet5555555555555555555555555555",
+      "amount": 750000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "SolGhostLiqAddaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22",
+      "block_number": 270001000,
+      "timestamp": "2024-01-15T08:20:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "SolGhostDevWallet5555555555555555555555555555",
+      "amount": 8000,
+      "value_usd": 2500,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "SolGhostBuy01aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy333",
+      "block_number": 271500000,
+      "timestamp": "2024-02-01T14:00:00Z",
+      "type": "buy",
+      "from_wallet": "SolGhostBuyer11111111111111111111111111111111",
+      "amount": 80000,
+      "value_usd": 3200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "SolGhostBuy02aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy444",
+      "block_number": 274000000,
+      "timestamp": "2024-03-10T10:30:00Z",
+      "type": "buy",
+      "from_wallet": "SolGhostBuyer22222222222222222222222222222222",
+      "amount": 50000,
+      "value_usd": 9500,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "SolGhostSell1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "block_number": 278500000,
+      "timestamp": "2024-04-20T16:00:00Z",
+      "type": "sell",
+      "from_wallet": "SolGhostBuyer11111111111111111111111111111111",
+      "amount": 40000,
+      "value_usd": 1200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "SolGhostSell2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "block_number": 284000000,
+      "timestamp": "2024-06-15T09:00:00Z",
+      "type": "sell",
+      "from_wallet": "SolGhostBuyer22222222222222222222222222222222",
+      "amount": 25000,
+      "value_usd": 300,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "SolGhostLastTxaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy77",
+      "block_number": 303000000,
+      "timestamp": "2024-09-22T14:00:00Z",
+      "type": "sell",
+      "from_wallet": "SolGhostBuyer11111111111111111111111111111111",
+      "amount": 5000,
+      "value_usd": 15,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "SolGhostDevWallet5555555555555555555555555555",
+    "first_transaction": "2024-01-15T08:00:00Z",
+    "last_transaction": "2024-01-15T08:20:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "SolGhostLiqAddaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22",
+      "timestamp": "2024-01-15T08:20:00Z",
+      "type": "add",
+      "wallet": "SolGhostDevWallet5555555555555555555555555555",
+      "amount_usd": 2500,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "dormancy",
+      "signal_strength": 55,
+      "token_address": "SolGhostMintAddr555555555555555555555555555555",
+      "token_name": "SOLGHOST",
+      "description": "8-month slow bleed with no single catastrophic event; holders gradually departed as price eroded 99% from peak",
+      "data": { "decay_months": 8, "peak_to_trough_pct": 99, "no_rug_event": true, "no_whale_exit": true }
+    }
+  ]
+}

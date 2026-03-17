@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "address": "MoonRatMintAddr1111111111111111111111111111111",
+    "name": "MOONRAT",
+    "symbol": "MRAT",
+    "decimals": 6,
+    "launch_date": "2024-05-01T10:00:00Z",
+    "creator_wallet": "MoonRatDevWallet111111111111111111111111111111",
+    "current_supply": 500000000
+  },
+  "candidate_data": {
+    "address": "MoonRatMintAddr1111111111111111111111111111111",
+    "name": "MOONRAT",
+    "name_raw": "MOONRAT",
+    "peak_market_cap": 340000,
+    "peak_holder_count": 620,
+    "current_holder_count": 412,
+    "last_transaction_date": "2024-11-05T18:30:00Z",
+    "days_since_last_tx": 132,
+    "rug_confirmed": false,
+    "unusual_patterns": false,
+    "cause_of_death": "abandonment"
+  },
+  "holder_history": [
+    { "date": "2024-05-01T10:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-05-08T00:00:00Z", "holder_count": 620, "top_holders": [
+      { "wallet": "MoonRatWhale1111111111111111111111111111111111", "balance": 25000000, "percentage": 5.0 },
+      { "wallet": "MoonRatWhale2222222222222222222222222222222222", "balance": 15000000, "percentage": 3.0 }
+    ]},
+    { "date": "2024-08-01T00:00:00Z", "holder_count": 530, "top_holders": [
+      { "wallet": "MoonRatWhale1111111111111111111111111111111111", "balance": 20000000, "percentage": 4.0 }
+    ]},
+    { "date": "2024-11-05T00:00:00Z", "holder_count": 412, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-05-01T10:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 300, "market_cap": 500 },
+    { "timestamp": "2024-05-08T00:00:00Z", "open": 0.00060, "high": 0.00068, "low": 0.00055, "close": 0.00068, "volume": 85000, "market_cap": 340000 },
+    { "timestamp": "2024-07-15T00:00:00Z", "open": 0.00012, "high": 0.00014, "low": 0.0001, "close": 0.00011, "volume": 4000, "market_cap": 55000 },
+    { "timestamp": "2024-11-05T18:30:00Z", "open": 0.000004, "high": 0.000005, "low": 0.000003, "close": 0.000003, "volume": 25, "market_cap": 1500 }
+  ],
+  "transactions": [
+    {
+      "hash": "MoonRatMintTx11aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy1",
+      "block_number": 290100000,
+      "timestamp": "2024-05-01T10:00:00Z",
+      "type": "mint",
+      "from_wallet": "MoonRatDevWallet111111111111111111111111111111",
+      "amount": 500000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "MoonRatLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22",
+      "block_number": 290100500,
+      "timestamp": "2024-05-01T10:10:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "MoonRatDevWallet111111111111111111111111111111",
+      "amount": 10000,
+      "value_usd": 3000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "MoonRatBuy001aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy33X",
+      "block_number": 290250000,
+      "timestamp": "2024-05-04T14:22:00Z",
+      "type": "buy",
+      "from_wallet": "MoonRatBuyer111111111111111111111111111111111",
+      "to_wallet": "MoonRatMintAddr1111111111111111111111111111111",
+      "amount": 50000,
+      "value_usd": 850,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "MoonRatBuy002aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy44X",
+      "block_number": 290400000,
+      "timestamp": "2024-05-07T09:45:00Z",
+      "type": "buy",
+      "from_wallet": "MoonRatBuyer222222222222222222222222222222222",
+      "to_wallet": "MoonRatMintAddr1111111111111111111111111111111",
+      "amount": 120000,
+      "value_usd": 12000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "MoonRatSell01aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy55X",
+      "block_number": 295800000,
+      "timestamp": "2024-07-20T11:00:00Z",
+      "type": "sell",
+      "from_wallet": "MoonRatBuyer111111111111111111111111111111111",
+      "amount": 30000,
+      "value_usd": 420,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "MoonRatLastTxaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy66X",
+      "block_number": 303200000,
+      "timestamp": "2024-11-05T18:30:00Z",
+      "type": "sell",
+      "from_wallet": "MoonRatBuyer222222222222222222222222222222222",
+      "amount": 5000,
+      "value_usd": 15,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "MoonRatDevWallet111111111111111111111111111111",
+    "first_transaction": "2024-05-01T10:00:00Z",
+    "last_transaction": "2024-05-08T00:00:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "MoonRatLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22",
+      "timestamp": "2024-05-01T10:10:00Z",
+      "type": "add",
+      "wallet": "MoonRatDevWallet111111111111111111111111111111",
+      "amount_usd": 3000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "dormancy",
+      "signal_strength": 72,
+      "token_address": "MoonRatMintAddr1111111111111111111111111111111",
+      "token_name": "MOONRAT",
+      "description": "Dev wallet went silent on day 7 after launch; community continued holding for 6 months with no development activity",
+      "data": { "dev_last_active_day": 7, "community_hold_months": 6, "dev_wallet_exit": false }
+    }
+  ]
+}

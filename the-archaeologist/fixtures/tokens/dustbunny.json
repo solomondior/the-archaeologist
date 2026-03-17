@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "address": "DustBunnyMintAddr333333333333333333333333333333",
+    "name": "DUSTBUNNY",
+    "symbol": "DUST",
+    "decimals": 6,
+    "launch_date": "2024-07-03T12:00:00Z",
+    "creator_wallet": "DustBunnyDevWallet3333333333333333333333333333",
+    "current_supply": 250000000
+  },
+  "candidate_data": {
+    "address": "DustBunnyMintAddr333333333333333333333333333333",
+    "name": "DUSTBUNNY",
+    "name_raw": "DUSTBUNNY",
+    "peak_market_cap": 89000,
+    "peak_holder_count": 210,
+    "current_holder_count": 185,
+    "last_transaction_date": "2024-07-17T22:05:00Z",
+    "days_since_last_tx": 163,
+    "rug_confirmed": false,
+    "unusual_patterns": true,
+    "cause_of_death": "unknown"
+  },
+  "holder_history": [
+    { "date": "2024-07-03T12:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-07-10T00:00:00Z", "holder_count": 210, "top_holders": [
+      { "wallet": "DustWhale111111111111111111111111111111111111", "balance": 12500000, "percentage": 5.0 },
+      { "wallet": "DustWhale222222222222222222222222222222222222", "balance": 7500000, "percentage": 3.0 }
+    ]},
+    { "date": "2024-07-17T00:00:00Z", "holder_count": 198, "top_holders": [
+      { "wallet": "DustWhale111111111111111111111111111111111111", "balance": 12500000, "percentage": 5.0 }
+    ]},
+    { "date": "2024-12-01T00:00:00Z", "holder_count": 185, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-07-03T12:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 100, "market_cap": 250 },
+    { "timestamp": "2024-07-10T00:00:00Z", "open": 0.00033, "high": 0.000356, "low": 0.00029, "close": 0.000356, "volume": 18000, "market_cap": 89000 },
+    { "timestamp": "2024-07-17T12:00:00Z", "open": 0.000120, "high": 0.000125, "low": 0.000110, "close": 0.000115, "volume": 800, "market_cap": 28750 },
+    { "timestamp": "2024-07-17T22:05:00Z", "open": 0.000115, "high": 0.000115, "low": 0.000090, "close": 0.000090, "volume": 50, "market_cap": 22500 }
+  ],
+  "transactions": [
+    {
+      "hash": "DustBunnyMint1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 298500000,
+      "timestamp": "2024-07-03T12:00:00Z",
+      "type": "mint",
+      "from_wallet": "DustBunnyDevWallet3333333333333333333333333333",
+      "amount": 250000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "DustBunnyLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22X",
+      "block_number": 298500500,
+      "timestamp": "2024-07-03T12:10:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "DustBunnyDevWallet3333333333333333333333333333",
+      "amount": 5000,
+      "value_usd": 1500,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "DustBunnyBuy1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy33X",
+      "block_number": 298800000,
+      "timestamp": "2024-07-06T08:15:00Z",
+      "type": "buy",
+      "from_wallet": "DustBuyer111111111111111111111111111111111111",
+      "amount": 30000,
+      "value_usd": 400,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "DustBunnyBuy2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy44X",
+      "block_number": 299100000,
+      "timestamp": "2024-07-09T20:00:00Z",
+      "type": "buy",
+      "from_wallet": "DustBuyer222222222222222222222222222222222222",
+      "amount": 75000,
+      "value_usd": 5200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "DustBunnyLast1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy55",
+      "block_number": 299450000,
+      "timestamp": "2024-07-17T22:05:00Z",
+      "type": "sell",
+      "from_wallet": "DustBuyer111111111111111111111111111111111111",
+      "amount": 10000,
+      "value_usd": 90,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "DustBunnyDevWallet3333333333333333333333333333",
+    "first_transaction": "2024-07-03T12:00:00Z",
+    "last_transaction": "2024-07-03T12:10:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "DustBunnyLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy22X",
+      "timestamp": "2024-07-03T12:10:00Z",
+      "type": "add",
+      "wallet": "DustBunnyDevWallet3333333333333333333333333333",
+      "amount_usd": 1500,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "dormancy",
+      "signal_strength": 78,
+      "token_address": "DustBunnyMintAddr333333333333333333333333333333",
+      "token_name": "DUSTBUNNY",
+      "description": "Zero transactions recorded after day 14 from launch; no identifiable rug event, whale exit, or dev activity — cause of death unknown",
+      "data": { "last_active_day": 14, "total_transactions": 5, "no_rug_evidence": true, "no_whale_exit": true }
+    }
+  ]
+}

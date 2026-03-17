@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "address": "CopeTokenMintXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "name": "COPETOKEN",
+    "symbol": "COPE",
+    "decimals": 6,
+    "launch_date": "2024-03-12T14:00:00Z",
+    "creator_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "current_supply": 1000000000
+  },
+  "candidate_data": {
+    "address": "CopeTokenMintXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "name": "COPETOKEN",
+    "name_raw": "COPETOKEN",
+    "peak_market_cap": 1200000,
+    "peak_holder_count": 1200,
+    "current_holder_count": 847,
+    "last_transaction_date": "2024-06-14T03:12:00Z",
+    "days_since_last_tx": 277,
+    "rug_confirmed": true,
+    "unusual_patterns": false,
+    "cause_of_death": "rug"
+  },
+  "holder_history": [
+    { "date": "2024-03-12T14:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-03-20T00:00:00Z", "holder_count": 1200, "top_holders": [
+      { "wallet": "CopeWhale1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "balance": 50000000, "percentage": 5.0 },
+      { "wallet": "CopeWhale2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "balance": 30000000, "percentage": 3.0 }
+    ]},
+    { "date": "2024-06-14T00:00:00Z", "holder_count": 847, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-03-12T14:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 500, "market_cap": 1000 },
+    { "timestamp": "2024-03-20T00:00:00Z", "open": 0.0011, "high": 0.0012, "low": 0.001, "close": 0.0012, "volume": 220000, "market_cap": 1200000 },
+    { "timestamp": "2024-04-11T00:00:00Z", "open": 0.00009, "high": 0.0001, "low": 0.00007, "close": 0.00009, "volume": 2000, "market_cap": 90000 },
+    { "timestamp": "2024-06-14T03:12:00Z", "open": 0.000002, "high": 0.000002, "low": 0.000001, "close": 0.000001, "volume": 10, "market_cap": 1000 }
+  ],
+  "transactions": [
+    {
+      "hash": "3Xm9kR9aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+      "block_number": 284720000,
+      "timestamp": "2024-03-12T14:00:00Z",
+      "type": "mint",
+      "from_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount": 1000000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "9fJpp2WaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+      "block_number": 285100000,
+      "timestamp": "2024-04-11T22:48:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount": 47000,
+      "value_usd": 47000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "dK4vvB7aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+      "block_number": 285100050,
+      "timestamp": "2024-04-11T22:56:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount": 63000,
+      "value_usd": 63000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "LastBuyCopeXXaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy123",
+      "block_number": 287904000,
+      "timestamp": "2024-06-14T03:12:00Z",
+      "type": "buy",
+      "from_wallet": "CopeLastBuyerXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount": 50000,
+      "value_usd": 0.05,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "first_transaction": "2024-03-12T14:00:00Z",
+    "last_transaction": "2024-04-11T22:56:00Z",
+    "total_transactions": 4,
+    "inflows": [],
+    "outflows": [
+      {
+        "hash": "9fJpp2WaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+        "block_number": 285100000,
+        "timestamp": "2024-04-11T22:48:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "amount": 47000,
+        "value_usd": 47000,
+        "is_dev_wallet": true
+      },
+      {
+        "hash": "dK4vvB7aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+        "block_number": 285100050,
+        "timestamp": "2024-04-11T22:56:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "amount": 63000,
+        "value_usd": 63000,
+        "is_dev_wallet": true
+      }
+    ],
+    "net_position_usd": -110000
+  },
+  "liquidity_events": [
+    {
+      "hash": "LiqAddCopeXXXXaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy12",
+      "timestamp": "2024-03-12T14:05:00Z",
+      "type": "add",
+      "wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount_usd": 5000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "9fJpp2WaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+      "timestamp": "2024-04-11T22:48:00Z",
+      "type": "remove",
+      "wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount_usd": 47000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "dK4vvB7aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyZZ1122334",
+      "timestamp": "2024-04-11T22:56:00Z",
+      "type": "remove",
+      "wallet": "CopeDevWalletXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "amount_usd": 63000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "rug_pattern",
+      "signal_strength": 95,
+      "token_address": "CopeTokenMintXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "token_name": "COPETOKEN",
+      "description": "Dev wallet drained $110k liquidity in two transactions within 8 minutes, 30 days after launch",
+      "data": { "drain_amount_usd": 110000, "time_to_rug_days": 30, "transactions": 2, "drain_window_minutes": 8 }
+    }
+  ]
+}

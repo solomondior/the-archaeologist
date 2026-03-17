@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "address": "PepeHandsMintAddr666666666666666666666666666666",
+    "name": "PEPEHANDS",
+    "symbol": "PEPE",
+    "decimals": 6,
+    "launch_date": "2024-01-30T20:00:00Z",
+    "creator_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+    "current_supply": 10000000000
+  },
+  "candidate_data": {
+    "address": "PepeHandsMintAddr666666666666666666666666666666",
+    "name": "PEPEHANDS",
+    "name_raw": "PEPEHANDS",
+    "peak_market_cap": 6300000,
+    "peak_holder_count": 9800,
+    "current_holder_count": 5200,
+    "last_transaction_date": "2024-05-10T11:22:00Z",
+    "days_since_last_tx": 234,
+    "rug_confirmed": true,
+    "unusual_patterns": false,
+    "cause_of_death": "rug"
+  },
+  "holder_history": [
+    { "date": "2024-01-30T20:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-02-15T00:00:00Z", "holder_count": 6400, "top_holders": [
+      { "wallet": "PepeWhale111111111111111111111111111111111111", "balance": 300000000, "percentage": 3.0 },
+      { "wallet": "PepeWhale222222222222222222222222222222222222", "balance": 200000000, "percentage": 2.0 }
+    ]},
+    { "date": "2024-03-01T00:00:00Z", "holder_count": 9800, "top_holders": [
+      { "wallet": "PepeWhale111111111111111111111111111111111111", "balance": 400000000, "percentage": 4.0 }
+    ]},
+    { "date": "2024-05-10T00:00:00Z", "holder_count": 5200, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-01-30T20:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 2000, "market_cap": 10000 },
+    { "timestamp": "2024-02-28T00:00:00Z", "open": 0.00058, "high": 0.00063, "low": 0.00052, "close": 0.00063, "volume": 1800000, "market_cap": 6300000 },
+    { "timestamp": "2024-03-20T00:00:00Z", "open": 0.000095, "high": 0.0001, "low": 0.00008, "close": 0.000088, "volume": 85000, "market_cap": 880000 },
+    { "timestamp": "2024-04-15T07:00:00Z", "open": 0.000008, "high": 0.000009, "low": 0.000006, "close": 0.000006, "volume": 2000, "market_cap": 60000 },
+    { "timestamp": "2024-05-10T11:22:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 5, "market_cap": 10000 }
+  ],
+  "transactions": [
+    {
+      "hash": "PepeMintTx1111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 276000000,
+      "timestamp": "2024-01-30T20:00:00Z",
+      "type": "mint",
+      "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount": 10000000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeLiqAdd111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "block_number": 276001000,
+      "timestamp": "2024-01-30T20:30:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount": 100000,
+      "value_usd": 50000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeBuy001111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy333",
+      "block_number": 276500000,
+      "timestamp": "2024-02-05T12:00:00Z",
+      "type": "buy",
+      "from_wallet": "PepeWhale111111111111111111111111111111111111",
+      "amount": 400000000,
+      "value_usd": 180000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "PepeBuy002111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy444",
+      "block_number": 277000000,
+      "timestamp": "2024-02-18T15:30:00Z",
+      "type": "buy",
+      "from_wallet": "PepeWhale222222222222222222222222222222222222",
+      "amount": 200000000,
+      "value_usd": 95000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "PepeRugTx1111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "block_number": 281100000,
+      "timestamp": "2024-04-15T06:45:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount": 200000,
+      "value_usd": 200000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeRugTx2222aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "block_number": 281100200,
+      "timestamp": "2024-04-15T07:02:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount": 180000,
+      "value_usd": 180000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeLastTx111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+      "block_number": 286600000,
+      "timestamp": "2024-05-10T11:22:00Z",
+      "type": "sell",
+      "from_wallet": "PepeRetailHolder66666666666666666666666666666",
+      "amount": 10000,
+      "value_usd": 0.01,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "PepeHandsDevWallet6666666666666666666666666666",
+    "first_transaction": "2024-01-30T20:00:00Z",
+    "last_transaction": "2024-04-15T07:02:00Z",
+    "total_transactions": 4,
+    "inflows": [],
+    "outflows": [
+      {
+        "hash": "PepeRugTx1111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+        "block_number": 281100000,
+        "timestamp": "2024-04-15T06:45:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+        "amount": 200000,
+        "value_usd": 200000,
+        "is_dev_wallet": true
+      },
+      {
+        "hash": "PepeRugTx2222aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+        "block_number": 281100200,
+        "timestamp": "2024-04-15T07:02:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "PepeHandsDevWallet6666666666666666666666666666",
+        "amount": 180000,
+        "value_usd": 180000,
+        "is_dev_wallet": true
+      }
+    ],
+    "net_position_usd": -380000
+  },
+  "liquidity_events": [
+    {
+      "hash": "PepeLiqAdd111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "timestamp": "2024-01-30T20:30:00Z",
+      "type": "add",
+      "wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount_usd": 50000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeRugTx1111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "timestamp": "2024-04-15T06:45:00Z",
+      "type": "remove",
+      "wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount_usd": 200000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "PepeRugTx2222aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "timestamp": "2024-04-15T07:02:00Z",
+      "type": "remove",
+      "wallet": "PepeHandsDevWallet6666666666666666666666666666",
+      "amount_usd": 180000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "rug_pattern",
+      "signal_strength": 98,
+      "token_address": "PepeHandsMintAddr666666666666666666666666666666",
+      "token_name": "PEPEHANDS",
+      "description": "Dev wallet drained $380k in two liquidity removes 17 minutes apart; highest peak market cap token in the set at $6.3M",
+      "data": { "drain_amount_usd": 380000, "peak_market_cap": 6300000, "drain_window_minutes": 17, "transactions": 2 }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "address": "HaroldTokenMintAddr222222222222222222222222222",
+    "name": "HAROLD",
+    "symbol": "HRLD",
+    "decimals": 6,
+    "launch_date": "2024-02-14T09:00:00Z",
+    "creator_wallet": "HaroldDevWallet22222222222222222222222222222222",
+    "current_supply": 2000000000
+  },
+  "candidate_data": {
+    "address": "HaroldTokenMintAddr222222222222222222222222222",
+    "name": "HAROLD",
+    "name_raw": "HAROLD",
+    "peak_market_cap": 4800000,
+    "peak_holder_count": 5200,
+    "current_holder_count": 3100,
+    "last_transaction_date": "2024-05-22T07:44:00Z",
+    "days_since_last_tx": 222,
+    "rug_confirmed": true,
+    "unusual_patterns": false,
+    "cause_of_death": "rug"
+  },
+  "holder_history": [
+    { "date": "2024-02-14T09:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-02-28T00:00:00Z", "holder_count": 3800, "top_holders": [
+      { "wallet": "HaroldWhale111111111111111111111111111111111111", "balance": 80000000, "percentage": 4.0 },
+      { "wallet": "HaroldWhale222222222222222222222222222222222222", "balance": 60000000, "percentage": 3.0 }
+    ]},
+    { "date": "2024-03-15T00:00:00Z", "holder_count": 5200, "top_holders": [
+      { "wallet": "HaroldWhale111111111111111111111111111111111111", "balance": 100000000, "percentage": 5.0 }
+    ]},
+    { "date": "2024-05-22T00:00:00Z", "holder_count": 3100, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-02-14T09:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 1000, "market_cap": 2000 },
+    { "timestamp": "2024-03-10T00:00:00Z", "open": 0.0021, "high": 0.0024, "low": 0.0019, "close": 0.0024, "volume": 980000, "market_cap": 4800000 },
+    { "timestamp": "2024-04-01T00:00:00Z", "open": 0.00045, "high": 0.00051, "low": 0.00040, "close": 0.00042, "volume": 45000, "market_cap": 840000 },
+    { "timestamp": "2024-04-25T08:00:00Z", "open": 0.000018, "high": 0.00002, "low": 0.000015, "close": 0.000016, "volume": 500, "market_cap": 32000 },
+    { "timestamp": "2024-05-22T07:44:00Z", "open": 0.000003, "high": 0.000003, "low": 0.000001, "close": 0.000001, "volume": 8, "market_cap": 2000 }
+  ],
+  "transactions": [
+    {
+      "hash": "HaroldMintTx111aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy1",
+      "block_number": 278000000,
+      "timestamp": "2024-02-14T09:00:00Z",
+      "type": "mint",
+      "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount": 2000000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "block_number": 278001000,
+      "timestamp": "2024-02-14T09:15:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount": 50000,
+      "value_usd": 20000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldBuy0011aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy333",
+      "block_number": 278500000,
+      "timestamp": "2024-02-20T16:00:00Z",
+      "type": "buy",
+      "from_wallet": "HaroldBuyer1111111111111111111111111111111111",
+      "amount": 200000,
+      "value_usd": 8000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "HaroldBuy0021aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy444",
+      "block_number": 279200000,
+      "timestamp": "2024-03-05T12:30:00Z",
+      "type": "buy",
+      "from_wallet": "HaroldBuyer2222222222222222222222222222222222",
+      "amount": 500000,
+      "value_usd": 45000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "HaroldRugTx1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy5555",
+      "block_number": 283800000,
+      "timestamp": "2024-04-25T07:50:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount": 140000,
+      "value_usd": 140000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldRugTx2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy6666",
+      "block_number": 283800100,
+      "timestamp": "2024-04-25T08:00:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount": 140000,
+      "value_usd": 140000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldLastByraaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+      "block_number": 287400000,
+      "timestamp": "2024-05-22T07:44:00Z",
+      "type": "buy",
+      "from_wallet": "HaroldLastBuyer111111111111111111111111111111",
+      "amount": 80000,
+      "value_usd": 0.08,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "HaroldDevWallet22222222222222222222222222222222",
+    "first_transaction": "2024-02-14T09:00:00Z",
+    "last_transaction": "2024-04-25T08:00:00Z",
+    "total_transactions": 4,
+    "inflows": [],
+    "outflows": [
+      {
+        "hash": "HaroldRugTx1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy5555",
+        "block_number": 283800000,
+        "timestamp": "2024-04-25T07:50:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+        "amount": 140000,
+        "value_usd": 140000,
+        "is_dev_wallet": true
+      },
+      {
+        "hash": "HaroldRugTx2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy6666",
+        "block_number": 283800100,
+        "timestamp": "2024-04-25T08:00:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "HaroldDevWallet22222222222222222222222222222222",
+        "amount": 140000,
+        "value_usd": 140000,
+        "is_dev_wallet": true
+      }
+    ],
+    "net_position_usd": -280000
+  },
+  "liquidity_events": [
+    {
+      "hash": "HaroldLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "timestamp": "2024-02-14T09:15:00Z",
+      "type": "add",
+      "wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount_usd": 20000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldRugTx1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy5555",
+      "timestamp": "2024-04-25T07:50:00Z",
+      "type": "remove",
+      "wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount_usd": 140000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "HaroldRugTx2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy6666",
+      "timestamp": "2024-04-25T08:00:00Z",
+      "type": "remove",
+      "wallet": "HaroldDevWallet22222222222222222222222222222222",
+      "amount_usd": 140000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "rug_pattern",
+      "signal_strength": 97,
+      "token_address": "HaroldTokenMintAddr222222222222222222222222222",
+      "token_name": "HAROLD",
+      "description": "Dev wallet drained $280k in two liquidity removes 10 minutes apart; last buyer wallet still holds worthless tokens",
+      "data": { "drain_amount_usd": 280000, "drain_window_minutes": 10, "last_buyer_loss_usd": 280000, "last_buyer_wallet": "HaroldLastBuyer111111111111111111111111111111" }
+    },
+    {
+      "type": "last_buyer",
+      "signal_strength": 88,
+      "token_address": "HaroldTokenMintAddr222222222222222222222222222",
+      "token_name": "HAROLD",
+      "wallet_address": "HaroldLastBuyer111111111111111111111111111111",
+      "description": "Last buyer purchased after rug event with negligible liquidity remaining; position now essentially worthless",
+      "data": { "purchase_value_usd": 0.08, "purchase_date": "2024-05-22T07:44:00Z", "tokens_held": 80000 }
+    }
+  ]
+}

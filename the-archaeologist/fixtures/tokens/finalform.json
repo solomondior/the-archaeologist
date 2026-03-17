@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "address": "FinalFormMintAddr999999999999999999999999999999",
+    "name": "FINALFORM",
+    "symbol": "FINL",
+    "decimals": 6,
+    "launch_date": "2024-03-25T11:00:00Z",
+    "creator_wallet": "FinalFormDevWallet999999999999999999999999999",
+    "current_supply": 5000000000
+  },
+  "candidate_data": {
+    "address": "FinalFormMintAddr999999999999999999999999999999",
+    "name": "FINALFORM",
+    "name_raw": "FINALFORM",
+    "peak_market_cap": 3400000,
+    "peak_holder_count": 4100,
+    "current_holder_count": 2200,
+    "last_transaction_date": "2024-08-05T21:00:00Z",
+    "days_since_last_tx": 224,
+    "rug_confirmed": false,
+    "unusual_patterns": true,
+    "cause_of_death": "whale_exit"
+  },
+  "holder_history": [
+    { "date": "2024-03-25T11:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-04-10T00:00:00Z", "holder_count": 3200, "top_holders": [
+      { "wallet": "FinalFormWhale111111111111111111111111111111111", "balance": 300000000, "percentage": 6.0 },
+      { "wallet": "FinalFormWhale222222222222222222222222222222222", "balance": 250000000, "percentage": 5.0 },
+      { "wallet": "FinalFormWhale333333333333333333333333333333333", "balance": 200000000, "percentage": 4.0 },
+      { "wallet": "FinalFormWhale444444444444444444444444444444444", "balance": 150000000, "percentage": 3.0 },
+      { "wallet": "FinalFormWhale555555555555555555555555555555555", "balance": 100000000, "percentage": 2.0 }
+    ]},
+    { "date": "2024-04-20T00:00:00Z", "holder_count": 4100, "top_holders": [
+      { "wallet": "FinalFormWhale111111111111111111111111111111111", "balance": 300000000, "percentage": 6.0 }
+    ]},
+    { "date": "2024-08-05T00:00:00Z", "holder_count": 2200, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-03-25T11:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 1500, "market_cap": 5000 },
+    { "timestamp": "2024-04-15T00:00:00Z", "open": 0.00062, "high": 0.00068, "low": 0.00058, "close": 0.00068, "volume": 680000, "market_cap": 3400000 },
+    { "timestamp": "2024-05-10T14:00:00Z", "open": 0.000045, "high": 0.000048, "low": 0.000040, "close": 0.000042, "volume": 12000, "market_cap": 210000 },
+    { "timestamp": "2024-06-20T00:00:00Z", "open": 0.000009, "high": 0.00001, "low": 0.0000078, "close": 0.0000082, "volume": 2500, "market_cap": 41000 },
+    { "timestamp": "2024-08-05T21:00:00Z", "open": 0.000002, "high": 0.000002, "low": 0.000001, "close": 0.000001, "volume": 10, "market_cap": 5000 }
+  ],
+  "transactions": [
+    {
+      "hash": "FinalFormMint1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 284000000,
+      "timestamp": "2024-03-25T11:00:00Z",
+      "type": "mint",
+      "from_wallet": "FinalFormDevWallet999999999999999999999999999",
+      "amount": 5000000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "FinalFormLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "block_number": 284001000,
+      "timestamp": "2024-03-25T11:30:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "FinalFormDevWallet999999999999999999999999999",
+      "amount": 30000,
+      "value_usd": 12000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "FinalFormBuy1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy333",
+      "block_number": 284500000,
+      "timestamp": "2024-04-01T08:00:00Z",
+      "type": "buy",
+      "from_wallet": "FinalFormWhale111111111111111111111111111111111",
+      "amount": 300000000,
+      "value_usd": 95000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormBuy2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy444",
+      "block_number": 284600000,
+      "timestamp": "2024-04-03T14:00:00Z",
+      "type": "buy",
+      "from_wallet": "FinalFormWhale222222222222222222222222222222222",
+      "amount": 250000000,
+      "value_usd": 78000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormBuy3aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "block_number": 284700000,
+      "timestamp": "2024-04-05T10:00:00Z",
+      "type": "buy",
+      "from_wallet": "FinalFormWhale333333333333333333333333333333333",
+      "amount": 200000000,
+      "value_usd": 62000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormBuy4aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "block_number": 284750000,
+      "timestamp": "2024-04-06T09:00:00Z",
+      "type": "buy",
+      "from_wallet": "FinalFormWhale444444444444444444444444444444444",
+      "amount": 150000000,
+      "value_usd": 47000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormBuy5aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+      "block_number": 284800000,
+      "timestamp": "2024-04-07T11:00:00Z",
+      "type": "buy",
+      "from_wallet": "FinalFormWhale555555555555555555555555555555555",
+      "amount": 100000000,
+      "value_usd": 31000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormSel1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy888",
+      "block_number": 288300000,
+      "timestamp": "2024-05-10T13:50:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormWhale111111111111111111111111111111111",
+      "amount": 300000000,
+      "value_usd": 12800,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormSel2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy999",
+      "block_number": 288300400,
+      "timestamp": "2024-05-10T14:02:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormWhale222222222222222222222222222222222",
+      "amount": 250000000,
+      "value_usd": 10100,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormSel3aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyAAA",
+      "block_number": 288300700,
+      "timestamp": "2024-05-10T14:06:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormWhale333333333333333333333333333333333",
+      "amount": 200000000,
+      "value_usd": 7800,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormSel4aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyBBB",
+      "block_number": 288301000,
+      "timestamp": "2024-05-10T14:09:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormWhale444444444444444444444444444444444",
+      "amount": 150000000,
+      "value_usd": 5600,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormSel5aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyCCC",
+      "block_number": 288301500,
+      "timestamp": "2024-05-10T14:10:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormWhale555555555555555555555555555555555",
+      "amount": 100000000,
+      "value_usd": 3600,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "FinalFormLastaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyyDDD",
+      "block_number": 301000000,
+      "timestamp": "2024-08-05T21:00:00Z",
+      "type": "sell",
+      "from_wallet": "FinalFormRetail99999999999999999999999999999999",
+      "amount": 3000,
+      "value_usd": 3,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "FinalFormDevWallet999999999999999999999999999",
+    "first_transaction": "2024-03-25T11:00:00Z",
+    "last_transaction": "2024-03-25T11:30:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "FinalFormLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "timestamp": "2024-03-25T11:30:00Z",
+      "type": "add",
+      "wallet": "FinalFormDevWallet999999999999999999999999999",
+      "amount_usd": 12000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "other",
+      "signal_strength": 90,
+      "token_address": "FinalFormMintAddr999999999999999999999999999999",
+      "token_name": "FINALFORM",
+      "description": "Five wallets collectively holding 20% of supply executed coordinated exit over 20 minutes, collapsing price by 93%",
+      "data": {
+        "whale_wallets": 5,
+        "combined_supply_pct": 20,
+        "exit_window_minutes": 20,
+        "price_crash_pct": 93,
+        "coordinated_exit": true,
+        "total_exit_value_usd": 39900
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "address": "RugMasterMintAddr888888888888888888888888888888",
+    "name": "RUGMASTER",
+    "symbol": "RUGM",
+    "decimals": 6,
+    "launch_date": "2024-08-20T18:00:00Z",
+    "creator_wallet": "RugMasterDevWallet88888888888888888888888888888",
+    "current_supply": 420000000
+  },
+  "candidate_data": {
+    "address": "RugMasterMintAddr888888888888888888888888888888",
+    "name": "RUGMASTER",
+    "name_raw": "RUGMASTER",
+    "peak_market_cap": 950000,
+    "peak_holder_count": 1600,
+    "current_holder_count": 890,
+    "last_transaction_date": "2024-09-29T04:55:00Z",
+    "days_since_last_tx": 169,
+    "rug_confirmed": true,
+    "unusual_patterns": true,
+    "cause_of_death": "rug"
+  },
+  "holder_history": [
+    { "date": "2024-08-20T18:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-09-01T00:00:00Z", "holder_count": 1600, "top_holders": [
+      { "wallet": "RugMasterWhale111111111111111111111111111111111", "balance": 42000000, "percentage": 10.0 },
+      { "wallet": "RugMasterWhale222222222222222222222222222222222", "balance": 25200000, "percentage": 6.0 }
+    ]},
+    { "date": "2024-09-04T00:00:00Z", "holder_count": 1420, "top_holders": [] },
+    { "date": "2024-09-29T00:00:00Z", "holder_count": 890, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-08-20T18:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 600, "market_cap": 420 },
+    { "timestamp": "2024-09-01T00:00:00Z", "open": 0.0021, "high": 0.00226, "low": 0.00195, "close": 0.00226, "volume": 185000, "market_cap": 950000 },
+    { "timestamp": "2024-09-03T12:00:00Z", "open": 0.00041, "high": 0.00044, "low": 0.00038, "close": 0.0004, "volume": 22000, "market_cap": 168000 },
+    { "timestamp": "2024-09-04T07:00:00Z", "open": 0.000015, "high": 0.000018, "low": 0.000012, "close": 0.000013, "volume": 800, "market_cap": 5460 },
+    { "timestamp": "2024-09-29T04:55:00Z", "open": 0.000002, "high": 0.000002, "low": 0.000001, "close": 0.000001, "volume": 5, "market_cap": 420 }
+  ],
+  "transactions": [
+    {
+      "hash": "RugMasterMint1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 303500000,
+      "timestamp": "2024-08-20T18:00:00Z",
+      "type": "mint",
+      "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount": 420000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "block_number": 303501000,
+      "timestamp": "2024-08-20T18:15:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount": 15000,
+      "value_usd": 6000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterBuy1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy333",
+      "block_number": 304000000,
+      "timestamp": "2024-08-26T10:00:00Z",
+      "type": "buy",
+      "from_wallet": "RugMasterWhale111111111111111111111111111111111",
+      "amount": 42000000,
+      "value_usd": 28000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "RugMasterBuy2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy444",
+      "block_number": 304200000,
+      "timestamp": "2024-08-28T16:00:00Z",
+      "type": "buy",
+      "from_wallet": "RugMasterWhale222222222222222222222222222222222",
+      "amount": 25200000,
+      "value_usd": 18000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "RugMasterBuy3aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "block_number": 304500000,
+      "timestamp": "2024-08-31T20:00:00Z",
+      "type": "buy",
+      "from_wallet": "RugMasterRetail8888888888888888888888888888888",
+      "amount": 10000,
+      "value_usd": 9500,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "RugMasterRug1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "block_number": 304800000,
+      "timestamp": "2024-09-03T06:30:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount": 55000,
+      "value_usd": 55000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterRug2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+      "block_number": 304800120,
+      "timestamp": "2024-09-03T06:38:00Z",
+      "type": "liquidity_remove",
+      "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount": 39000,
+      "value_usd": 39000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterLastaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy888",
+      "block_number": 306500000,
+      "timestamp": "2024-09-29T04:55:00Z",
+      "type": "sell",
+      "from_wallet": "RugMasterRetail8888888888888888888888888888888",
+      "amount": 2000,
+      "value_usd": 2,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "RugMasterDevWallet88888888888888888888888888888",
+    "first_transaction": "2024-08-20T18:00:00Z",
+    "last_transaction": "2024-09-03T06:38:00Z",
+    "total_transactions": 4,
+    "inflows": [],
+    "outflows": [
+      {
+        "hash": "RugMasterRug1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+        "block_number": 304800000,
+        "timestamp": "2024-09-03T06:30:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+        "amount": 55000,
+        "value_usd": 55000,
+        "is_dev_wallet": true
+      },
+      {
+        "hash": "RugMasterRug2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+        "block_number": 304800120,
+        "timestamp": "2024-09-03T06:38:00Z",
+        "type": "liquidity_remove",
+        "from_wallet": "RugMasterDevWallet88888888888888888888888888888",
+        "amount": 39000,
+        "value_usd": 39000,
+        "is_dev_wallet": true
+      }
+    ],
+    "net_position_usd": -94000
+  },
+  "liquidity_events": [
+    {
+      "hash": "RugMasterLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "timestamp": "2024-08-20T18:15:00Z",
+      "type": "add",
+      "wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount_usd": 6000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterRug1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "timestamp": "2024-09-03T06:30:00Z",
+      "type": "remove",
+      "wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount_usd": 55000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "RugMasterRug2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy777",
+      "timestamp": "2024-09-03T06:38:00Z",
+      "type": "remove",
+      "wallet": "RugMasterDevWallet88888888888888888888888888888",
+      "amount_usd": 39000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "rug_pattern",
+      "signal_strength": 96,
+      "token_address": "RugMasterMintAddr888888888888888888888888888888",
+      "token_name": "RUGMASTER",
+      "description": "Ironically named token rugged on day 14; dev drained $94k in 8 minutes despite token name advertising intent",
+      "data": { "drain_amount_usd": 94000, "time_to_rug_days": 14, "drain_window_minutes": 8, "ironic_name": true }
+    },
+    {
+      "type": "other",
+      "signal_strength": 60,
+      "token_address": "RugMasterMintAddr888888888888888888888888888888",
+      "token_name": "RUGMASTER",
+      "description": "Token name explicitly references the exit strategy; community continued buying despite transparent naming",
+      "data": { "name_warning_ignored": true, "buyers_after_name_visible": 1600 }
+    }
+  ]
+}

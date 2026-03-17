@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "address": "VaporCatMintAddr777777777777777777777777777777",
+    "name": "VAPORCAT",
+    "symbol": "VCAT",
+    "decimals": 6,
+    "launch_date": "2024-06-10T14:00:00Z",
+    "creator_wallet": "VaporCatDevWallet7777777777777777777777777777",
+    "current_supply": 800000000
+  },
+  "candidate_data": {
+    "address": "VaporCatMintAddr777777777777777777777777777777",
+    "name": "VAPORCAT",
+    "name_raw": "VAPORCAT",
+    "peak_market_cap": 520000,
+    "peak_holder_count": 1100,
+    "current_holder_count": 680,
+    "last_transaction_date": "2024-12-18T09:30:00Z",
+    "days_since_last_tx": 89,
+    "rug_confirmed": false,
+    "unusual_patterns": false,
+    "cause_of_death": "abandonment"
+  },
+  "holder_history": [
+    { "date": "2024-06-10T14:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-06-18T00:00:00Z", "holder_count": 1100, "top_holders": [
+      { "wallet": "VaporCatWhale111111111111111111111111111111111", "balance": 40000000, "percentage": 5.0 },
+      { "wallet": "VaporCatWhale222222222222222222222222222222222", "balance": 24000000, "percentage": 3.0 }
+    ]},
+    { "date": "2024-09-01T00:00:00Z", "holder_count": 870, "top_holders": [
+      { "wallet": "VaporCatWhale111111111111111111111111111111111", "balance": 38000000, "percentage": 4.75 }
+    ]},
+    { "date": "2024-12-18T00:00:00Z", "holder_count": 680, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-06-10T14:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 400, "market_cap": 800 },
+    { "timestamp": "2024-06-18T00:00:00Z", "open": 0.00062, "high": 0.00065, "low": 0.00058, "close": 0.00065, "volume": 95000, "market_cap": 520000 },
+    { "timestamp": "2024-09-01T00:00:00Z", "open": 0.000085, "high": 0.00009, "low": 0.000080, "close": 0.000082, "volume": 3800, "market_cap": 65600 },
+    { "timestamp": "2024-11-15T00:00:00Z", "open": 0.000015, "high": 0.000016, "low": 0.000013, "close": 0.000014, "volume": 500, "market_cap": 11200 },
+    { "timestamp": "2024-12-18T09:30:00Z", "open": 0.000005, "high": 0.000006, "low": 0.000004, "close": 0.000004, "volume": 20, "market_cap": 3200 }
+  ],
+  "transactions": [
+    {
+      "hash": "VaporCatMint1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy111",
+      "block_number": 293000000,
+      "timestamp": "2024-06-10T14:00:00Z",
+      "type": "mint",
+      "from_wallet": "VaporCatDevWallet7777777777777777777777777777",
+      "amount": 800000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "VaporCatLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy2222",
+      "block_number": 293001000,
+      "timestamp": "2024-06-10T14:20:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "VaporCatDevWallet7777777777777777777777777777",
+      "amount": 12000,
+      "value_usd": 4000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "VaporCatBuy1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy3333",
+      "block_number": 293400000,
+      "timestamp": "2024-06-14T10:00:00Z",
+      "type": "buy",
+      "from_wallet": "VaporCatBuyer111111111111111111111111111111111",
+      "amount": 100000,
+      "value_usd": 12500,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "VaporCatBuy2aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy4444",
+      "block_number": 293600000,
+      "timestamp": "2024-06-17T18:00:00Z",
+      "type": "buy",
+      "from_wallet": "VaporCatBuyer222222222222222222222222222222222",
+      "amount": 80000,
+      "value_usd": 28000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "VaporCatComm1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy555",
+      "block_number": 295000000,
+      "timestamp": "2024-07-05T09:00:00Z",
+      "type": "transfer",
+      "from_wallet": "VaporCatBuyer111111111111111111111111111111111",
+      "to_wallet": "VaporCatBuyer333333333333333333333333333333333",
+      "amount": 20000,
+      "value_usd": 1200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "VaporCatSell1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy666",
+      "block_number": 302000000,
+      "timestamp": "2024-09-01T14:00:00Z",
+      "type": "sell",
+      "from_wallet": "VaporCatBuyer222222222222222222222222222222222",
+      "amount": 40000,
+      "value_usd": 3200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "VaporCatLastaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy7777",
+      "block_number": 315000000,
+      "timestamp": "2024-12-18T09:30:00Z",
+      "type": "sell",
+      "from_wallet": "VaporCatBuyer333333333333333333333333333333333",
+      "amount": 5000,
+      "value_usd": 20,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "VaporCatDevWallet7777777777777777777777777777",
+    "first_transaction": "2024-06-10T14:00:00Z",
+    "last_transaction": "2024-06-10T14:20:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "VaporCatLiq1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy2222",
+      "timestamp": "2024-06-10T14:20:00Z",
+      "type": "add",
+      "wallet": "VaporCatDevWallet7777777777777777777777777777",
+      "amount_usd": 4000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "dormancy",
+      "signal_strength": 68,
+      "token_address": "VaporCatMintAddr777777777777777777777777777777",
+      "token_name": "VAPORCAT",
+      "description": "Dev wallet went silent immediately after launch; active community continued trading for 6+ months before natural attrition",
+      "data": { "dev_last_active_day": 0, "community_active_months": 6, "peak_holder_count": 1100, "peak_market_cap": 520000 }
+    }
+  ]
+}

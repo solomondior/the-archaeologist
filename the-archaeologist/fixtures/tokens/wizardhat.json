@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "address": "WizardHatMintAddr444444444444444444444444444444",
+    "name": "WIZARDHAT",
+    "symbol": "WZRD",
+    "decimals": 6,
+    "launch_date": "2024-04-08T16:00:00Z",
+    "creator_wallet": "WizardHatDevWallet44444444444444444444444444444",
+    "current_supply": 1000000000
+  },
+  "candidate_data": {
+    "address": "WizardHatMintAddr444444444444444444444444444444",
+    "name": "WIZARDHAT",
+    "name_raw": "WIZARDHAT",
+    "peak_market_cap": 2100000,
+    "peak_holder_count": 2800,
+    "current_holder_count": 1640,
+    "last_transaction_date": "2024-09-12T15:20:00Z",
+    "days_since_last_tx": 95,
+    "rug_confirmed": false,
+    "unusual_patterns": true,
+    "cause_of_death": "whale_exit"
+  },
+  "holder_history": [
+    { "date": "2024-04-08T16:00:00Z", "holder_count": 1, "top_holders": [] },
+    { "date": "2024-04-22T00:00:00Z", "holder_count": 2800, "top_holders": [
+      { "wallet": "WizardWhale1111111111111111111111111111111111", "balance": 200000000, "percentage": 20.0 },
+      { "wallet": "WizardWhale2222222222222222222222222222222222", "balance": 180000000, "percentage": 18.0 },
+      { "wallet": "WizardWhale3333333333333333333333333333333333", "balance": 220000000, "percentage": 22.0 }
+    ]},
+    { "date": "2024-06-01T00:00:00Z", "holder_count": 2200, "top_holders": [
+      { "wallet": "WizardWhale3333333333333333333333333333333333", "balance": 220000000, "percentage": 22.0 }
+    ]},
+    { "date": "2024-09-12T00:00:00Z", "holder_count": 1640, "top_holders": [] }
+  ],
+  "price_history": [
+    { "timestamp": "2024-04-08T16:00:00Z", "open": 0.000001, "high": 0.000001, "low": 0.000001, "close": 0.000001, "volume": 800, "market_cap": 1000 },
+    { "timestamp": "2024-04-20T00:00:00Z", "open": 0.0019, "high": 0.0021, "low": 0.0017, "close": 0.0021, "volume": 420000, "market_cap": 2100000 },
+    { "timestamp": "2024-06-10T10:00:00Z", "open": 0.00008, "high": 0.00009, "low": 0.00006, "close": 0.00007, "volume": 3500, "market_cap": 70000 },
+    { "timestamp": "2024-08-01T00:00:00Z", "open": 0.000012, "high": 0.000013, "low": 0.00001, "close": 0.00001, "volume": 200, "market_cap": 10000 },
+    { "timestamp": "2024-09-12T15:20:00Z", "open": 0.000003, "high": 0.000003, "low": 0.000002, "close": 0.000002, "volume": 15, "market_cap": 2000 }
+  ],
+  "transactions": [
+    {
+      "hash": "WizardMintTx11aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy11",
+      "block_number": 285900000,
+      "timestamp": "2024-04-08T16:00:00Z",
+      "type": "mint",
+      "from_wallet": "WizardHatDevWallet44444444444444444444444444444",
+      "amount": 1000000000,
+      "value_usd": 0,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "WizardLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "block_number": 285901000,
+      "timestamp": "2024-04-08T16:15:00Z",
+      "type": "liquidity_add",
+      "from_wallet": "WizardHatDevWallet44444444444444444444444444444",
+      "amount": 20000,
+      "value_usd": 8000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "WizardBuy001aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy3333",
+      "block_number": 286200000,
+      "timestamp": "2024-04-12T09:00:00Z",
+      "type": "buy",
+      "from_wallet": "WizardWhale1111111111111111111111111111111111",
+      "amount": 200000000,
+      "value_usd": 85000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardBuy002aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy4444",
+      "block_number": 286210000,
+      "timestamp": "2024-04-12T10:30:00Z",
+      "type": "buy",
+      "from_wallet": "WizardWhale2222222222222222222222222222222222",
+      "amount": 180000000,
+      "value_usd": 76500,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardBuy003aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy5555",
+      "block_number": 286220000,
+      "timestamp": "2024-04-12T12:00:00Z",
+      "type": "buy",
+      "from_wallet": "WizardWhale3333333333333333333333333333333333",
+      "amount": 220000000,
+      "value_usd": 93500,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardSell01aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy6666",
+      "block_number": 290800000,
+      "timestamp": "2024-06-10T09:45:00Z",
+      "type": "sell",
+      "from_wallet": "WizardWhale1111111111111111111111111111111111",
+      "amount": 200000000,
+      "value_usd": 14000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardSell02aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy7777",
+      "block_number": 290800300,
+      "timestamp": "2024-06-10T10:02:00Z",
+      "type": "sell",
+      "from_wallet": "WizardWhale2222222222222222222222222222222222",
+      "amount": 180000000,
+      "value_usd": 11200,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardSell03aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy8888",
+      "block_number": 290800600,
+      "timestamp": "2024-06-10T10:42:00Z",
+      "type": "sell",
+      "from_wallet": "WizardWhale3333333333333333333333333333333333",
+      "amount": 220000000,
+      "value_usd": 12100,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "WizardLastTxaaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy9999",
+      "block_number": 302800000,
+      "timestamp": "2024-09-12T15:20:00Z",
+      "type": "sell",
+      "from_wallet": "WizardRetailHolder44444444444444444444444444",
+      "amount": 5000,
+      "value_usd": 10,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet": "WizardHatDevWallet44444444444444444444444444444",
+    "first_transaction": "2024-04-08T16:00:00Z",
+    "last_transaction": "2024-04-08T16:15:00Z",
+    "total_transactions": 2,
+    "inflows": [],
+    "outflows": [],
+    "net_position_usd": 0
+  },
+  "liquidity_events": [
+    {
+      "hash": "WizardLiqAdd1aaBBccDDeeFFggHHiiJJkkLLmmNNooQQrrSSTTuuVVwwXXyy222",
+      "timestamp": "2024-04-08T16:15:00Z",
+      "type": "add",
+      "wallet": "WizardHatDevWallet44444444444444444444444444444",
+      "amount_usd": 8000,
+      "is_dev_wallet": true
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "other",
+      "signal_strength": 85,
+      "token_address": "WizardHatMintAddr444444444444444444444444444444",
+      "token_name": "WIZARDHAT",
+      "description": "Three wallets collectively holding 60% of supply all exited within the same 57-minute window, crashing price by 96%",
+      "data": {
+        "whale_wallets": 3,
+        "combined_supply_pct": 60,
+        "exit_window_minutes": 57,
+        "price_crash_pct": 96,
+        "coordinated_exit": true
+      }
+    }
+  ]
+}
