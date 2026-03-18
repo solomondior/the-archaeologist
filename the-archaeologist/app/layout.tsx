@@ -32,6 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Link href="/fossils" className="text-[#555] hover:text-[#888] transition-colors">
             FOSSILS
           </Link>
+          <Link href="/witness" className="text-[#555] hover:text-[#888] transition-colors">
+            WITNESS
+          </Link>
         </nav>
         {children}
       </body>

@@ -7,6 +7,7 @@ import type { FilterState, CauseFilter } from './filter-sidebar'
 interface ArchiveTableProps {
   digs: DigRow[]
   filters: FilterState
+  search?: string
 }
 
 const CAUSE_LABELS: Record<string, string> = {
@@ -37,13 +38,21 @@ function formatMon(iso: string | null): string {
   return new Date(iso).toLocaleDateString('en-US', { month: 'short', year: '2-digit' })
 }
 
-export function ArchiveTable({ digs, filters }: ArchiveTableProps) {
+export function ArchiveTable({ digs, filters, search }: ArchiveTableProps) {
   const filtered = digs
     .filter(
       (d) =>
         filters.causes.length === 0 ||
         filters.causes.includes((d.cause_of_death ?? 'unknown') as CauseFilter)
     )
+    .filter((d) => {
+      if (!search?.trim()) return true
+      const q = search.trim().toLowerCase()
+      return (
+        d.token_name.toLowerCase().includes(q) ||
+        (d.token_address ?? '').toLowerCase().includes(q)
+      )
+    })
     .sort((a, b) => {
       if (filters.sortBy === 'oldest') return a.dig_number - b.dig_number
       if (filters.sortBy === 'highest_peak') return (b.peak_market_cap ?? 0) - (a.peak_market_cap ?? 0)

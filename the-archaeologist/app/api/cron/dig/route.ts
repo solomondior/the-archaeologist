@@ -6,6 +6,7 @@ import { ContextBuilder } from '@/lib/agent/context-builder'
 import { DigGenerator } from '@/lib/agent/dig-generator'
 import { ValidationLayer } from '@/lib/agent/validator'
 import { MemoryManager } from '@/lib/agent/memory'
+import { recordBurn } from '@/lib/burns/engine'
 import type { DigCandidateRow } from '@/lib/supabase/types'
 
 export async function POST(req: NextRequest) {
@@ -99,6 +100,29 @@ export async function POST(req: NextRequest) {
     if (insertError) throw new Error(insertError.message)
 
     await supabase.from('dig_candidates').update({ status: 'completed' }).eq('id', candidate.id)
+
+    // Fire burn events — IMPORTANT: do NOT parallelise these; each reads current supply
+    // after the previous burn has been recorded (percentage-based amounts are order-sensitive)
+    if (validation.passed && digData) {
+      const digId = (digData as { id: string }).id
+
+      if (generated.cause_of_death === 'rug') {
+        await recordBurn(supabase, { triggerType: 'rug_confirmed', triggerReference: digId })
+      }
+
+      const { data: newFossils } = await supabase
+        .from('fossils')
+        .select('id')
+        .eq('discovered_in_dig', digId)
+
+      for (const fossil of newFossils ?? []) {
+        await recordBurn(supabase, { triggerType: 'fossil_found', triggerReference: fossil.id })
+      }
+
+      if (digNumber % 100 === 0) {
+        await recordBurn(supabase, { triggerType: 'milestone_100', triggerReference: digId })
+      }
+    }
 
     await memory.recordSuccess({
       cycleNumber,

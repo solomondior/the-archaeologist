@@ -2,35 +2,54 @@ import { createServerClient } from '@/lib/supabase/server'
 import { DigCard } from '@/components/dig-card'
 import { FragmentItem } from '@/components/fragment-item'
 import { StatsBar } from '@/components/stats-bar'
-import type { DigRow, FragmentRow } from '@/lib/supabase/types'
+import { NominationLeaderboard } from '@/components/nomination-leaderboard'
+import type { DigRow, FragmentRow, NominationRow } from '@/lib/supabase/types'
 
 export const dynamic = 'force-dynamic'
 
 async function getData() {
   const supabase = createServerClient()
 
-  const [{ data: latestDig }, { data: recentFragments }, { count: digCount }, { count: fossilCount }] =
-    await Promise.all([
-      supabase
-        .from('digs')
-        .select('*')
-        .eq('published', true)
-        .order('dig_number', { ascending: false })
-        .limit(1)
-        .single(),
-      supabase
-        .from('fragments')
-        .select('*')
-        .eq('published', true)
-        .order('generated_at', { ascending: false })
-        .limit(6),
-      supabase.from('digs').select('*', { count: 'exact', head: true }).eq('published', true),
-      supabase.from('fossils').select('*', { count: 'exact', head: true }),
-    ])
+  const [
+    { data: latestDig },
+    { data: recentFragments },
+    { count: digCount },
+    { count: fossilCount },
+    { data: burnData },
+    { data: topNominations },
+  ] = await Promise.all([
+    supabase
+      .from('digs')
+      .select('*')
+      .eq('published', true)
+      .order('dig_number', { ascending: false })
+      .limit(1)
+      .single(),
+    supabase
+      .from('fragments')
+      .select('*')
+      .eq('published', true)
+      .order('generated_at', { ascending: false })
+      .limit(6),
+    supabase.from('digs').select('*', { count: 'exact', head: true }).eq('published', true),
+    supabase.from('fossils').select('*', { count: 'exact', head: true }),
+    supabase.from('burn_events').select('amount_burned'),
+    supabase
+      .from('nominations')
+      .select('*')
+      .eq('status', 'pending')
+      .order('votes', { ascending: false })
+      .limit(5),
+  ])
 
   const lastDigHours = latestDig
     ? Math.floor((Date.now() - new Date((latestDig as DigRow).generated_at).getTime()) / 3_600_000)
     : null
+
+  const totalBurned = (burnData ?? []).reduce(
+    (sum, e) => sum + Number(e.amount_burned),
+    0
+  )
 
   return {
     latestDig: latestDig as DigRow | null,
@@ -38,11 +57,21 @@ async function getData() {
     tokensExamined: digCount ?? 0,
     fossilsFound: fossilCount ?? 0,
     lastDigHoursAgo: lastDigHours,
+    totalBurned,
+    topNominations: (topNominations ?? []) as NominationRow[],
   }
 }
 
 export default async function HomePage() {
-  const { latestDig, recentFragments, tokensExamined, fossilsFound, lastDigHoursAgo } = await getData()
+  const {
+    latestDig,
+    recentFragments,
+    tokensExamined,
+    fossilsFound,
+    lastDigHoursAgo,
+    totalBurned,
+    topNominations,
+  } = await getData()
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
@@ -68,7 +97,7 @@ export default async function HomePage() {
           <StatsBar
             tokensExamined={tokensExamined}
             fossilsFound={fossilsFound}
-            totalBurned={0}
+            totalBurned={totalBurned}
             lastDigHoursAgo={lastDigHoursAgo}
           />
 
@@ -80,6 +109,8 @@ export default async function HomePage() {
               recentFragments.map((f) => <FragmentItem key={f.id} fragment={f} />)
             )}
           </div>
+
+          <NominationLeaderboard nominations={topNominations} />
 
           <div className="border-t border-[#1a1a1a] pt-6">
             <p className="text-[10px] text-[#444] italic">every token has a last transaction.</p>
