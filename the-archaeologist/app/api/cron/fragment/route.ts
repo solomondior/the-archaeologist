@@ -4,6 +4,7 @@ import { getDataProvider } from '@/lib/data-provider'
 import { ContextBuilder } from '@/lib/agent/context-builder'
 import { FragmentGenerator } from '@/lib/agent/fragment-generator'
 import { MemoryManager } from '@/lib/agent/memory'
+import { postFragmentTweet } from '@/lib/twitter/post'
 import type { FragmentRow } from '@/lib/supabase/types'
 
 export async function POST(req: NextRequest) {
@@ -46,13 +47,21 @@ export async function POST(req: NextRequest) {
     const generator = new FragmentGenerator()
     const content = await generator.generate(fragmentContext)
 
-    await supabase.from('fragments').insert({
-      content,
-      source_token: anomaly.token_address ?? null,
-      source_wallet: anomaly.wallet_address ?? null,
-      anomaly_type: anomaly.type,
-      published: true,
-    })
+    const { data: fragmentData } = await supabase
+      .from('fragments')
+      .insert({
+        content,
+        source_token: anomaly.token_address ?? null,
+        source_wallet: anomaly.wallet_address ?? null,
+        anomaly_type: anomaly.type,
+        published: true,
+      })
+      .select()
+      .single()
+
+    if (fragmentData) {
+      await postFragmentTweet(fragmentData as FragmentRow)
+    }
 
     await memory.recordSuccess({
       cycleNumber,

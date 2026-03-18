@@ -7,7 +7,8 @@ import { DigGenerator } from '@/lib/agent/dig-generator'
 import { ValidationLayer } from '@/lib/agent/validator'
 import { MemoryManager } from '@/lib/agent/memory'
 import { recordBurn } from '@/lib/burns/engine'
-import type { DigCandidateRow } from '@/lib/supabase/types'
+import { postDigTweet } from '@/lib/twitter/post'
+import type { DigCandidateRow, DigRow } from '@/lib/supabase/types'
 
 export async function POST(req: NextRequest) {
   if (req.headers.get('authorization') !== `Bearer ${process.env.CRON_SECRET}`) {
@@ -100,6 +101,10 @@ export async function POST(req: NextRequest) {
     if (insertError) throw new Error(insertError.message)
 
     await supabase.from('dig_candidates').update({ status: 'completed' }).eq('id', candidate.id)
+
+    if (validation.passed && digData) {
+      await postDigTweet(digData as DigRow)
+    }
 
     // Fire burn events — IMPORTANT: do NOT parallelise these; each reads current supply
     // after the previous burn has been recorded (percentage-based amounts are order-sensitive)

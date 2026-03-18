@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { postBurnTweet } from '@/lib/twitter/post'
 
 export type BurnTriggerType =
   | 'rug_confirmed'
@@ -84,6 +85,9 @@ export async function recordBurn(
     .single()
 
   if (error) throw new Error(`Failed to record burn: ${error.message}`)
+
+  await postBurnTweet({ amount, triggerType: opts.triggerType, txHash, currentSupply: supplyAfter })
+
   return { id: data.id, amount, txHash }
 }
 
