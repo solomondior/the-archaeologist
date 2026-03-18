@@ -65,9 +65,18 @@ export function EvidencePanel({ evidence, digNumber, tokenName }: EvidencePanelP
         >
           → share to X
         </a>
-        <span className="block text-xs text-[#333] cursor-not-allowed">
-          → nominate related token (phase 2)
-        </span>
+        <a
+          href="/nominate"
+          className="block text-xs text-[#555] hover:text-[#888] transition-colors"
+        >
+          → nominate a related token
+        </a>
+        <a
+          href="/confess"
+          className="block text-xs text-[#555] hover:text-[#888] transition-colors"
+        >
+          → confession booth
+        </a>
       </div>
     </aside>
   )

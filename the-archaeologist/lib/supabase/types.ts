@@ -49,6 +49,40 @@ export interface DigCandidateRow {
   added_at: string
 }
 
+export interface NominationRow {
+  id: string
+  token_address: string
+  token_name: string | null
+  reason: string | null
+  submitter_wallet: string | null
+  votes: number
+  status: 'pending' | 'queued' | 'completed' | 'rejected'
+  burn_tx: string | null
+  submitted_at: string
+}
+
+export interface ConfessionRow {
+  id: string
+  content: string
+  used_in_dig: string | null
+  submitted_at: string
+}
+
+export interface FossilRow {
+  id: string
+  wallet_address: string
+  token_address: string
+  token_name: string | null
+  entry_date: string | null
+  entry_amount: number | null
+  entry_value_usd: number | null
+  current_value_usd: number | null
+  days_dormant: number | null
+  consecutive_rugs: number | null
+  discovered_in_dig: string | null
+  discovered_at: string
+}
+
 export interface AgentMemoryRow {
   id: string
   cycle_number: number

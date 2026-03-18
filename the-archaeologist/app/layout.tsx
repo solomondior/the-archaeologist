@@ -23,6 +23,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Link href="/fragments" className="text-[#555] hover:text-[#888] transition-colors">
             FRAGMENTS
           </Link>
+          <Link href="/nominations" className="text-[#555] hover:text-[#888] transition-colors">
+            NOMINATE
+          </Link>
+          <Link href="/confess" className="text-[#555] hover:text-[#888] transition-colors">
+            CONFESS
+          </Link>
+          <Link href="/fossils" className="text-[#555] hover:text-[#888] transition-colors">
+            FOSSILS
+          </Link>
         </nav>
         {children}
       </body>
