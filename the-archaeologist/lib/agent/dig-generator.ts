@@ -22,8 +22,8 @@ const DigOutputSchema = z.object({
   on_chain_evidence: z.array(
     z.object({
       type: z.string(),
-      hash: z.string().optional(),
-      address: z.string().optional(),
+      hash: z.string().nullable().optional(),
+      address: z.string().nullable().optional(),
       description: z.string(),
       solscan_url: z.string().nullable().optional(),
     })
