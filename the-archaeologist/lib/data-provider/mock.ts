@@ -46,8 +46,11 @@ export class MockDataProvider implements DataProvider {
       this.fixtures.flatMap((f) => [
         f.metadata.address,
         f.metadata.creator_wallet,
+        f.dev_wallet_activity.wallet_address,
+        ...f.dev_wallet_activity.other_rugs.map((r) => r.token_address),
         ...f.transactions.map((t) => t.from_wallet),
         ...f.transactions.map((t) => t.to_wallet ?? '').filter(Boolean),
+        ...f.liquidity_events.map((e) => e.wallet).filter(Boolean),
       ])
     )
   }
