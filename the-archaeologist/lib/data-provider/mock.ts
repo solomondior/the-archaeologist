@@ -38,7 +38,10 @@ export class MockDataProvider implements DataProvider {
 
   constructor() {
     this.fixtures = loadFixtures()
-    this.allHashes = new Set(this.fixtures.flatMap((f) => f.transactions.map((t) => t.hash)))
+    this.allHashes = new Set([
+      ...this.fixtures.flatMap((f) => f.transactions.map((t) => t.hash)),
+      ...this.fixtures.flatMap((f) => f.liquidity_events.map((e) => e.transaction_hash)),
+    ])
     this.allAddresses = new Set(
       this.fixtures.flatMap((f) => [
         f.metadata.address,
