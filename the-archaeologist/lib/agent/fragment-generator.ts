@@ -29,7 +29,7 @@ ${context.recent_fragment_contents.join('\n') || 'none yet'}
 Write a single fragment about this anomaly.`
 
     const message = await client.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 200,
       system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: userMessage }],
