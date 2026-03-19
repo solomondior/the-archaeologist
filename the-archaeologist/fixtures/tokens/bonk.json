@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "address": "So11111111111111111111111111111111111111112",
+    "name": "BONK",
+    "symbol": "BONK",
+    "decimals": 5,
+    "total_supply": 100000000000000,
+    "creator_wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+    "created_at": "2022-12-25T00:00:00Z",
+    "last_transaction_at": "2023-03-15T04:22:11Z",
+    "current_holder_count": 847,
+    "peak_holder_count": 124500,
+    "current_price_usd": 0.0000001,
+    "peak_price_usd": 0.000045,
+    "market_cap_usd": 10000,
+    "peak_market_cap_usd": 4500000
+  },
+  "candidate_data": {
+    "token_address": "So11111111111111111111111111111111111111112",
+    "token_name": "BONK",
+    "days_since_last_tx": 380,
+    "current_holder_count": 847,
+    "peak_holder_count": 124500,
+    "peak_market_cap_usd": 4500000,
+    "rug_signals": ["dev_sold_100_percent", "liquidity_removed"]
+  },
+  "holder_history": [
+    { "timestamp": "2022-12-25T00:00:00Z", "holder_count": 1200 },
+    { "timestamp": "2022-12-28T00:00:00Z", "holder_count": 45000 },
+    { "timestamp": "2023-01-04T00:00:00Z", "holder_count": 124500 },
+    { "timestamp": "2023-01-10T00:00:00Z", "holder_count": 89000 },
+    { "timestamp": "2023-01-18T00:00:00Z", "holder_count": 52000 },
+    { "timestamp": "2023-02-01T00:00:00Z", "holder_count": 18000 },
+    { "timestamp": "2023-03-01T00:00:00Z", "holder_count": 3200 },
+    { "timestamp": "2023-03-15T00:00:00Z", "holder_count": 847 }
+  ],
+  "price_history": [
+    { "timestamp": "2022-12-25T00:00:00Z", "open": 0.000001, "high": 0.000003, "low": 0.0000008, "close": 0.000002, "volume_usd": 45000 },
+    { "timestamp": "2022-12-28T00:00:00Z", "open": 0.000002, "high": 0.000012, "low": 0.0000015, "close": 0.000010, "volume_usd": 890000 },
+    { "timestamp": "2023-01-04T00:00:00Z", "open": 0.000010, "high": 0.000045, "low": 0.000008, "close": 0.000038, "volume_usd": 2400000 },
+    { "timestamp": "2023-01-10T00:00:00Z", "open": 0.000038, "high": 0.000040, "low": 0.000004, "close": 0.000006, "volume_usd": 1200000 },
+    { "timestamp": "2023-01-18T00:00:00Z", "open": 0.000006, "high": 0.000007, "low": 0.000001, "close": 0.0000015, "volume_usd": 340000 },
+    { "timestamp": "2023-02-01T00:00:00Z", "open": 0.0000015, "high": 0.0000018, "low": 0.0000003, "close": 0.0000004, "volume_usd": 12000 },
+    { "timestamp": "2023-03-15T00:00:00Z", "open": 0.0000004, "high": 0.0000004, "low": 0.0000001, "close": 0.0000001, "volume_usd": 800 }
+  ],
+  "transactions": [
+    {
+      "hash": "4xK9mP2nQrVbWcYzAeDfGhJkLmNpRsTuVwXyZaBcDeFgHiJkLmNpQrStUvWxYz12",
+      "timestamp": "2023-01-04T14:33:22Z",
+      "type": "sell",
+      "from_wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "to_wallet": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "amount_tokens": 50000000000000,
+      "amount_usd": 2200000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "7rT3wN8kMqVbXcZaEdFgHiJlMnOpRsTuVwXyZaBcDeF1HiJkLmNpQrStUvWxYz34",
+      "timestamp": "2023-01-04T14:41:07Z",
+      "type": "liquidity_removal",
+      "from_wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "to_wallet": null,
+      "amount_tokens": 0,
+      "amount_usd": 890000,
+      "is_dev_wallet": true
+    },
+    {
+      "hash": "2pQ1sL6jKoUaWbYdCeFhGiJkMnOpQrStUvWxYzAbCdEf2GhIjKlMnOpRsTuVwXy56",
+      "timestamp": "2023-01-10T09:12:44Z",
+      "type": "sell",
+      "from_wallet": "FxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "to_wallet": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "amount_tokens": 8000000000000,
+      "amount_usd": 320000,
+      "is_dev_wallet": false
+    },
+    {
+      "hash": "9mN2oK7jJnTaVbXcYdEfGhIjLmNpQrStUvWxYzAbCd3EfGhIjKlMnOpQrStUvWx78",
+      "timestamp": "2023-03-15T04:22:11Z",
+      "type": "sell",
+      "from_wallet": "BxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "to_wallet": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "amount_tokens": 120000000,
+      "amount_usd": 12,
+      "is_dev_wallet": false
+    }
+  ],
+  "dev_wallet_activity": {
+    "wallet_address": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+    "token_address": "So11111111111111111111111111111111111111112",
+    "tokens_received_at_launch": 50000000000000,
+    "tokens_sold": 50000000000000,
+    "percent_sold": 100,
+    "sell_timestamps": ["2023-01-04T14:33:22Z"],
+    "other_rugs": [
+      { "token_address": "CxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "token_name": "MOON2X", "days_ago": 120 },
+      { "token_address": "DxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "token_name": "SOLPUMP", "days_ago": 95 }
+    ]
+  },
+  "liquidity_events": [
+    {
+      "timestamp": "2022-12-25T00:00:00Z",
+      "type": "add",
+      "amount_usd": 50000,
+      "transaction_hash": "5kL8mP3nQrVbWcYzAeDfGhJkLmNpRsTuVwXyZaBcDeFgHiJkLmNpQrStUvWxYz11"
+    },
+    {
+      "timestamp": "2023-01-04T14:41:07Z",
+      "type": "remove",
+      "amount_usd": 890000,
+      "transaction_hash": "7rT3wN8kMqVbXcZaEdFgHiJlMnOpRsTuVwXyZaBcDeF1HiJkLmNpQrStUvWxYz34"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "whale_accumulation",
+      "description": "Single wallet held 40% of supply before dev dump",
+      "signal_strength": 0.85,
+      "token_address": "So11111111111111111111111111111111111111112",
+      "wallet_address": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "data": { "percent_held": 40, "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin" }
+    }
+  ]
+}
