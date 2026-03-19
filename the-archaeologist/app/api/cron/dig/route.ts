@@ -15,10 +15,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const supabase = createServerClient()
-  const provider = getDataProvider()
-  const memory = new MemoryManager(supabase)
-  const cycleNumber = await memory.getNextCycleNumber()
+  let supabase: ReturnType<typeof createServerClient>
+  let provider: ReturnType<typeof getDataProvider>
+  let memory: MemoryManager
+  let cycleNumber: number
+  try {
+    supabase = createServerClient()
+    provider = getDataProvider()
+    memory = new MemoryManager(supabase)
+    cycleNumber = await memory.getNextCycleNumber()
+  } catch (initErr) {
+    const msg = initErr instanceof Error ? initErr.message : String(initErr)
+    return NextResponse.json({ error: `init: ${msg}` }, { status: 500 })
+  }
 
   try {
     await scoreAllCandidates(supabase)
