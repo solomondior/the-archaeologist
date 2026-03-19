@@ -10,7 +10,7 @@
     "last_transaction_at": "2023-06-02T18:45:30Z",
     "current_holder_count": 234,
     "peak_holder_count": 8700,
-    "current_price_usd": 0.000000012,
+    "current_price_usd": 1.2e-08,
     "peak_price_usd": 0.0018,
     "market_cap_usd": 12,
     "peak_market_cap_usd": 1800000
@@ -22,24 +22,90 @@
     "current_holder_count": 234,
     "peak_holder_count": 8700,
     "peak_market_cap_usd": 1800000,
-    "rug_signals": ["whale_exit", "trading_stopped"]
+    "rug_signals": [
+      "whale_exit",
+      "trading_stopped"
+    ]
   },
   "holder_history": [
-    { "timestamp": "2023-04-10T00:00:00Z", "holder_count": 450 },
-    { "timestamp": "2023-04-14T00:00:00Z", "holder_count": 3200 },
-    { "timestamp": "2023-04-22T00:00:00Z", "holder_count": 8700 },
-    { "timestamp": "2023-05-01T00:00:00Z", "holder_count": 6100 },
-    { "timestamp": "2023-05-15T00:00:00Z", "holder_count": 2800 },
-    { "timestamp": "2023-06-01T00:00:00Z", "holder_count": 890 },
-    { "timestamp": "2023-06-02T00:00:00Z", "holder_count": 234 }
+    {
+      "timestamp": "2023-04-10T00:00:00Z",
+      "holder_count": 450
+    },
+    {
+      "timestamp": "2023-04-14T00:00:00Z",
+      "holder_count": 3200
+    },
+    {
+      "timestamp": "2023-04-22T00:00:00Z",
+      "holder_count": 8700
+    },
+    {
+      "timestamp": "2023-05-01T00:00:00Z",
+      "holder_count": 6100
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00Z",
+      "holder_count": 2800
+    },
+    {
+      "timestamp": "2023-06-01T00:00:00Z",
+      "holder_count": 890
+    },
+    {
+      "timestamp": "2023-06-02T00:00:00Z",
+      "holder_count": 234
+    }
   ],
   "price_history": [
-    { "timestamp": "2023-04-10T00:00:00Z", "open": 0.00002, "high": 0.00008, "low": 0.000018, "close": 0.00006, "volume_usd": 28000 },
-    { "timestamp": "2023-04-14T00:00:00Z", "open": 0.00006, "high": 0.00042, "low": 0.00005, "close": 0.00038, "volume_usd": 560000 },
-    { "timestamp": "2023-04-22T00:00:00Z", "open": 0.00038, "high": 0.0018, "low": 0.00030, "close": 0.0015, "volume_usd": 1400000 },
-    { "timestamp": "2023-05-01T00:00:00Z", "open": 0.0015, "high": 0.0016, "low": 0.00008, "close": 0.00012, "volume_usd": 780000 },
-    { "timestamp": "2023-05-15T00:00:00Z", "open": 0.00012, "high": 0.00014, "low": 0.000004, "close": 0.000005, "volume_usd": 45000 },
-    { "timestamp": "2023-06-02T00:00:00Z", "open": 0.000005, "high": 0.000005, "low": 0.000000012, "close": 0.000000012, "volume_usd": 90 }
+    {
+      "timestamp": "2023-04-10T00:00:00Z",
+      "open": 2e-05,
+      "high": 8e-05,
+      "low": 1.8e-05,
+      "close": 6e-05,
+      "volume_usd": 28000
+    },
+    {
+      "timestamp": "2023-04-14T00:00:00Z",
+      "open": 6e-05,
+      "high": 0.00042,
+      "low": 5e-05,
+      "close": 0.00038,
+      "volume_usd": 560000
+    },
+    {
+      "timestamp": "2023-04-22T00:00:00Z",
+      "open": 0.00038,
+      "high": 0.0018,
+      "low": 0.0003,
+      "close": 0.0015,
+      "volume_usd": 1400000
+    },
+    {
+      "timestamp": "2023-05-01T00:00:00Z",
+      "open": 0.0015,
+      "high": 0.0016,
+      "low": 8e-05,
+      "close": 0.00012,
+      "volume_usd": 780000
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00Z",
+      "open": 0.00012,
+      "high": 0.00014,
+      "low": 4e-06,
+      "close": 5e-06,
+      "volume_usd": 45000
+    },
+    {
+      "timestamp": "2023-06-02T00:00:00Z",
+      "open": 5e-06,
+      "high": 5e-06,
+      "low": 1.2e-08,
+      "close": 1.2e-08,
+      "volume_usd": 90
+    }
   ],
   "transactions": [
     {
@@ -79,9 +145,15 @@
     "tokens_received_at_launch": 300000000,
     "tokens_sold": 300000000,
     "percent_sold": 100,
-    "sell_timestamps": ["2023-04-22T11:14:52Z"],
+    "sell_timestamps": [
+      "2023-04-22T11:14:52Z"
+    ],
     "other_rugs": [
-      { "token_address": "ExQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "token_name": "CATCOIN", "days_ago": 60 }
+      {
+        "token_address": "ExQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+        "token_name": "CATCOIN",
+        "days_ago": 60
+      }
     ]
   },
   "liquidity_events": [
@@ -89,13 +161,17 @@
       "timestamp": "2023-04-10T00:00:00Z",
       "type": "add",
       "amount_usd": 12000,
-      "transaction_hash": "DdE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6dE7fG8hI9jK0lM1nO2pQ3rS4"
+      "hash": "DdE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6dE7fG8hI9jK0lM1nO2pQ3rS4",
+      "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "is_dev_wallet": false
     },
     {
       "timestamp": "2023-04-22T11:20:00Z",
       "type": "remove",
       "amount_usd": 580000,
-      "transaction_hash": "EeF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5aB6cD7eF8gH9iJ0kL1mN2oP3qR4sT5"
+      "hash": "EeF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5aB6cD7eF8gH9iJ0kL1mN2oP3qR4sT5",
+      "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "is_dev_wallet": true
     }
   ],
   "anomalies": [
@@ -105,7 +181,10 @@
       "signal_strength": 0.92,
       "token_address": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAs",
       "wallet_address": "3yQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
-      "data": { "prior_rug_count": 3, "wallet": "3yQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin" }
+      "data": {
+        "prior_rug_count": 3,
+        "wallet": "3yQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+      }
     }
   ]
 }

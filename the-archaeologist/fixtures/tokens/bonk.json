@@ -10,8 +10,8 @@
     "last_transaction_at": "2023-03-15T04:22:11Z",
     "current_holder_count": 847,
     "peak_holder_count": 124500,
-    "current_price_usd": 0.0000001,
-    "peak_price_usd": 0.000045,
+    "current_price_usd": 1e-07,
+    "peak_price_usd": 4.5e-05,
     "market_cap_usd": 10000,
     "peak_market_cap_usd": 4500000
   },
@@ -22,26 +22,102 @@
     "current_holder_count": 847,
     "peak_holder_count": 124500,
     "peak_market_cap_usd": 4500000,
-    "rug_signals": ["dev_sold_100_percent", "liquidity_removed"]
+    "rug_signals": [
+      "dev_sold_100_percent",
+      "liquidity_removed"
+    ]
   },
   "holder_history": [
-    { "timestamp": "2022-12-25T00:00:00Z", "holder_count": 1200 },
-    { "timestamp": "2022-12-28T00:00:00Z", "holder_count": 45000 },
-    { "timestamp": "2023-01-04T00:00:00Z", "holder_count": 124500 },
-    { "timestamp": "2023-01-10T00:00:00Z", "holder_count": 89000 },
-    { "timestamp": "2023-01-18T00:00:00Z", "holder_count": 52000 },
-    { "timestamp": "2023-02-01T00:00:00Z", "holder_count": 18000 },
-    { "timestamp": "2023-03-01T00:00:00Z", "holder_count": 3200 },
-    { "timestamp": "2023-03-15T00:00:00Z", "holder_count": 847 }
+    {
+      "timestamp": "2022-12-25T00:00:00Z",
+      "holder_count": 1200
+    },
+    {
+      "timestamp": "2022-12-28T00:00:00Z",
+      "holder_count": 45000
+    },
+    {
+      "timestamp": "2023-01-04T00:00:00Z",
+      "holder_count": 124500
+    },
+    {
+      "timestamp": "2023-01-10T00:00:00Z",
+      "holder_count": 89000
+    },
+    {
+      "timestamp": "2023-01-18T00:00:00Z",
+      "holder_count": 52000
+    },
+    {
+      "timestamp": "2023-02-01T00:00:00Z",
+      "holder_count": 18000
+    },
+    {
+      "timestamp": "2023-03-01T00:00:00Z",
+      "holder_count": 3200
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00Z",
+      "holder_count": 847
+    }
   ],
   "price_history": [
-    { "timestamp": "2022-12-25T00:00:00Z", "open": 0.000001, "high": 0.000003, "low": 0.0000008, "close": 0.000002, "volume_usd": 45000 },
-    { "timestamp": "2022-12-28T00:00:00Z", "open": 0.000002, "high": 0.000012, "low": 0.0000015, "close": 0.000010, "volume_usd": 890000 },
-    { "timestamp": "2023-01-04T00:00:00Z", "open": 0.000010, "high": 0.000045, "low": 0.000008, "close": 0.000038, "volume_usd": 2400000 },
-    { "timestamp": "2023-01-10T00:00:00Z", "open": 0.000038, "high": 0.000040, "low": 0.000004, "close": 0.000006, "volume_usd": 1200000 },
-    { "timestamp": "2023-01-18T00:00:00Z", "open": 0.000006, "high": 0.000007, "low": 0.000001, "close": 0.0000015, "volume_usd": 340000 },
-    { "timestamp": "2023-02-01T00:00:00Z", "open": 0.0000015, "high": 0.0000018, "low": 0.0000003, "close": 0.0000004, "volume_usd": 12000 },
-    { "timestamp": "2023-03-15T00:00:00Z", "open": 0.0000004, "high": 0.0000004, "low": 0.0000001, "close": 0.0000001, "volume_usd": 800 }
+    {
+      "timestamp": "2022-12-25T00:00:00Z",
+      "open": 1e-06,
+      "high": 3e-06,
+      "low": 8e-07,
+      "close": 2e-06,
+      "volume_usd": 45000
+    },
+    {
+      "timestamp": "2022-12-28T00:00:00Z",
+      "open": 2e-06,
+      "high": 1.2e-05,
+      "low": 1.5e-06,
+      "close": 1e-05,
+      "volume_usd": 890000
+    },
+    {
+      "timestamp": "2023-01-04T00:00:00Z",
+      "open": 1e-05,
+      "high": 4.5e-05,
+      "low": 8e-06,
+      "close": 3.8e-05,
+      "volume_usd": 2400000
+    },
+    {
+      "timestamp": "2023-01-10T00:00:00Z",
+      "open": 3.8e-05,
+      "high": 4e-05,
+      "low": 4e-06,
+      "close": 6e-06,
+      "volume_usd": 1200000
+    },
+    {
+      "timestamp": "2023-01-18T00:00:00Z",
+      "open": 6e-06,
+      "high": 7e-06,
+      "low": 1e-06,
+      "close": 1.5e-06,
+      "volume_usd": 340000
+    },
+    {
+      "timestamp": "2023-02-01T00:00:00Z",
+      "open": 1.5e-06,
+      "high": 1.8e-06,
+      "low": 3e-07,
+      "close": 4e-07,
+      "volume_usd": 12000
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00Z",
+      "open": 4e-07,
+      "high": 4e-07,
+      "low": 1e-07,
+      "close": 1e-07,
+      "volume_usd": 800
+    }
   ],
   "transactions": [
     {
@@ -91,10 +167,20 @@
     "tokens_received_at_launch": 50000000000000,
     "tokens_sold": 50000000000000,
     "percent_sold": 100,
-    "sell_timestamps": ["2023-01-04T14:33:22Z"],
+    "sell_timestamps": [
+      "2023-01-04T14:33:22Z"
+    ],
     "other_rugs": [
-      { "token_address": "CxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "token_name": "MOON2X", "days_ago": 120 },
-      { "token_address": "DxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "token_name": "SOLPUMP", "days_ago": 95 }
+      {
+        "token_address": "CxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+        "token_name": "MOON2X",
+        "days_ago": 120
+      },
+      {
+        "token_address": "DxQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+        "token_name": "SOLPUMP",
+        "days_ago": 95
+      }
     ]
   },
   "liquidity_events": [
@@ -102,13 +188,17 @@
       "timestamp": "2022-12-25T00:00:00Z",
       "type": "add",
       "amount_usd": 50000,
-      "transaction_hash": "5kL8mP3nQrVbWcYzAeDfGhJkLmNpRsTuVwXyZaBcDeFgHiJkLmNpQrStUvWxYz11"
+      "hash": "5kL8mP3nQrVbWcYzAeDfGhJkLmNpRsTuVwXyZaBcDeFgHiJkLmNpQrStUvWxYz11",
+      "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "is_dev_wallet": false
     },
     {
       "timestamp": "2023-01-04T14:41:07Z",
       "type": "remove",
       "amount_usd": 890000,
-      "transaction_hash": "7rT3wN8kMqVbXcZaEdFgHiJlMnOpRsTuVwXyZaBcDeF1HiJkLmNpQrStUvWxYz34"
+      "hash": "7rT3wN8kMqVbXcZaEdFgHiJlMnOpRsTuVwXyZaBcDeF1HiJkLmNpQrStUvWxYz34",
+      "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+      "is_dev_wallet": true
     }
   ],
   "anomalies": [
@@ -118,7 +208,10 @@
       "signal_strength": 0.85,
       "token_address": "So11111111111111111111111111111111111111112",
       "wallet_address": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
-      "data": { "percent_held": 40, "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin" }
+      "data": {
+        "percent_held": 40,
+        "wallet": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+      }
     }
   ]
 }
