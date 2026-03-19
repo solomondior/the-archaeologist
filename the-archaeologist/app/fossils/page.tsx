@@ -1,5 +1,6 @@
 import { createServerClient } from '@/lib/supabase/server'
 import Link from 'next/link'
+import { SolscanLink } from '@/components/solscan-link'
 import type { FossilRow } from '@/lib/supabase/types'
 
 export const dynamic = 'force-dynamic'
@@ -10,10 +11,6 @@ async function getData(): Promise<FossilRow[]> {
   return (data ?? []) as FossilRow[]
 }
 
-function truncate(addr: string): string {
-  if (addr.length <= 10) return addr
-  return `${addr.slice(0, 6)}...${addr.slice(-4)}`
-}
 
 function formatUsd(n: number | null): string {
   if (n === null) return '—'
@@ -38,7 +35,7 @@ function FossilEntry({
           <span className="text-[#555] text-[10px] mr-2">
             FOSSIL #{String(index + 1).padStart(3, '0')}
           </span>
-          <span className="text-xs text-[#888] font-mono">{truncate(fossil.wallet_address)}</span>
+          <SolscanLink value={fossil.wallet_address} type="account" />
         </div>
         {fossil.discovered_in_dig && (
           <Link
@@ -51,7 +48,7 @@ function FossilEntry({
       </div>
       <div className="text-[10px] text-[#555] flex flex-wrap gap-3">
         <span>
-          token: <span className="text-[#888]">{fossil.token_name ?? truncate(fossil.token_address)}</span>
+          token: <span className="text-[#888]">{fossil.token_name ?? <SolscanLink value={fossil.token_address} type="account" />}</span>
         </span>
         <span>
           entered: <span className="text-[#888]">{formatUsd(fossil.entry_value_usd)}</span>

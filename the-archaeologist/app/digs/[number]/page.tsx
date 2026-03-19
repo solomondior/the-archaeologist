@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { createServerClient } from '@/lib/supabase/server'
 import { DigCard } from '@/components/dig-card'
 import { EvidencePanel } from '@/components/evidence-panel'
+import { SolscanLink } from '@/components/solscan-link'
 import type { DigRow, FossilRow } from '@/lib/supabase/types'
 
 export const dynamic = 'force-dynamic'
@@ -85,9 +86,7 @@ export default async function DigPage({ params }: DigPageProps) {
               <div className="space-y-3">
                 {fossils.map((f) => (
                   <div key={f.id} className="border-b border-[#111] pb-3 text-xs space-y-1">
-                    <span className="text-[#555] font-mono">
-                      {f.wallet_address.slice(0, 6)}...{f.wallet_address.slice(-4)}
-                    </span>
+                    <SolscanLink value={f.wallet_address} type="account" />
                     <div className="text-[10px] text-[#444] flex flex-wrap gap-3">
                       {f.days_dormant !== null && <span>{f.days_dormant}d dormant</span>}
                       {f.consecutive_rugs !== null && <span>{f.consecutive_rugs} rugs held</span>}

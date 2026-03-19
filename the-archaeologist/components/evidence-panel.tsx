@@ -1,3 +1,5 @@
+import { SolscanLink } from '@/components/solscan-link'
+
 interface EvidenceItem {
   type: string
   hash?: string
@@ -12,10 +14,6 @@ interface EvidencePanelProps {
   tokenName: string
 }
 
-function truncate(s: string): string {
-  if (s.length <= 10) return s
-  return `${s.slice(0, 4)}...${s.slice(-3)}`
-}
 
 export function EvidencePanel({ evidence, digNumber, tokenName }: EvidencePanelProps) {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? ''
@@ -32,24 +30,17 @@ export function EvidencePanel({ evidence, digNumber, tokenName }: EvidencePanelP
           <div className="space-y-4">
             {evidence.map((e, i) => (
               <div key={i} className="space-y-1">
-                {(e.hash || e.address) && (
-                  <div className="text-xs text-[#e8e8e8]">
-                    {truncate(e.hash ?? e.address ?? '')}
+                {e.hash && (
+                  <div className="text-xs">
+                    <SolscanLink value={e.hash} type="tx" />
+                  </div>
+                )}
+                {e.address && !e.hash && (
+                  <div className="text-xs">
+                    <SolscanLink value={e.address} type="account" />
                   </div>
                 )}
                 <div className="text-[10px] text-[#555]">{e.description}</div>
-                {e.solscan_url ? (
-                  <a
-                    href={e.solscan_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] text-[#d97706] hover:text-[#e8e8e8] transition-colors"
-                  >
-                    solscan ↗
-                  </a>
-                ) : (
-                  <span className="text-[10px] text-[#333]">solscan (mock)</span>
-                )}
               </div>
             ))}
           </div>
