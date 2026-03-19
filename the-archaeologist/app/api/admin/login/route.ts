@@ -27,7 +27,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid password' }, { status: 401 })
   }
 
-  const sessionToken = process.env.ADMIN_SESSION_TOKEN ?? ''
+  const sessionToken = process.env.ADMIN_SESSION_TOKEN
+  if (!sessionToken) {
+    return NextResponse.json({ error: 'Admin not configured' }, { status: 500 })
+  }
   const res = NextResponse.json({ ok: true })
   res.cookies.set('admin_session', sessionToken, {
     httpOnly: true,

@@ -9,6 +9,12 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  const session = req.cookies.get('admin_session')?.value
+  const token = process.env.ADMIN_SESSION_TOKEN
+  if (!token || !session || session !== token) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   let body: unknown
   try {
     body = await req.json()

@@ -10,6 +10,12 @@ export async function PATCH(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const session = req.cookies.get('admin_session')?.value
+  const token = process.env.ADMIN_SESSION_TOKEN
+  if (!token || !session || session !== token) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   const { id } = await params
   let body: unknown
   try {
