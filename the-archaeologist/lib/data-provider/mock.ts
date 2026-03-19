@@ -12,13 +12,23 @@ import type {
   LiquidityEvent,
 } from './types'
 
+interface FixtureDevWalletActivity {
+  wallet_address: string
+  token_address: string
+  tokens_received_at_launch: number
+  tokens_sold: number
+  percent_sold: number
+  sell_timestamps: string[]
+  other_rugs: { token_address: string; token_name: string; days_ago: number }[]
+}
+
 interface FixtureFile {
   metadata: TokenMetadata
   candidate_data: TokenCandidate
   holder_history: HolderSnapshot[]
   price_history: PriceCandle[]
   transactions: TokenTransaction[]
-  dev_wallet_activity: WalletActivity
+  dev_wallet_activity: FixtureDevWalletActivity
   liquidity_events: LiquidityEvent[]
   anomalies: OnChainAnomaly[]
 }
@@ -91,7 +101,7 @@ export class MockDataProvider implements DataProvider {
   }
 
   async getDevWalletActivity(devWallet: string, tokenAddress: string): Promise<WalletActivity> {
-    return this.getFixture(tokenAddress).dev_wallet_activity
+    return this.getFixture(tokenAddress).dev_wallet_activity as unknown as WalletActivity
   }
 
   async getLiquidityEvents(address: string): Promise<LiquidityEvent[]> {
